@@ -1,14 +1,19 @@
 package pattern_dao;
 
+import java.math.BigDecimal;
+
 public class SellingProductDTO {
-	private int price;
+	private BigDecimal price;
 	private String name;
 	private String descriprion;
 	private String version;
 	private int id;
 	private String idaProgetto;
 	
-	public SellingProductDTO(int id, String name, int price, String description, String version, String idaProgetto) {
+	public SellingProductDTO(){
+	}
+	
+	public SellingProductDTO(int id, String name, BigDecimal price, String description, String version, String idaProgetto) {
 		this.id = id;
 		this.name = name;
 		this.descriprion = description;
@@ -17,11 +22,11 @@ public class SellingProductDTO {
 		this.price = price;
 	}
 
-	public int getPrice() {
+	public BigDecimal getPrice() {
 		return price;
 	}
 
-	public void setPrice(int price) {
+	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
 
