@@ -1,24 +1,54 @@
+/**
+ * Clase che gestisce  i prodotti nel carrello.
+ */
+
 package utility;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import pattern_dao.CartProduct;
 import pattern_dao.SellingProductDTO;
 
+/**
+ * 
+ * @author Raffaele, Vittorio.
+ *
+ */
+
 public class Cart  {
+	
+	/**
+	 * Costruttore che crea un ArrayList.
+	 */
 	
 	public Cart() {
 		
 		productList = new ArrayList<CartProduct>();
 	}
 	
+	/**
+	 * Costruttore che inizializza un ArrayList passato dall'utente.
+	 * @param productList
+	 */
+	
 	public Cart( ArrayList <CartProduct> productList) {
 		
 		this.productList = productList;
 	}
 	
+	/**
+	 * Metodo che aggiunge un prodotto ai prodotti in vendita.
+	 * @param product
+	 * @param quantity
+	 */
+	
 	public void addProduct(SellingProductDTO product, int quantity) {
 		this.addProduct(new CartProduct(product), quantity);
 	}
 	
+	/**
+	 * Metodo che aggiunge un prodotto al carrello se esso non è già presente.
+	 * @param productToAdd
+	 */
 	public void addProduct(CartProduct productToAdd) {
 		
 		boolean isPresent = false;
@@ -36,15 +66,24 @@ public class Cart  {
 		 
 	}
 	
+	/**
+	 * Metodo che rimuove un prodotto dal carrello.
+	 * @param productToRemove
+	 */
+	
 	public void removeProduct(CartProduct productToRemove) {
 		
-				productList.remove(productToRemove);
+		productList.remove(productToRemove);
 		
 	}
 	
+	/**
+	 * Metodo che rimuove tutti i prodotti dal carrello.
+	 */
+	
 	public void removeAll() {
 		
-		
+		productList.removeAll(productList);
 	}
 	
 	public void modElement() {
@@ -52,9 +91,14 @@ public class Cart  {
 		
 	}
 	
+	/**
+	 * Metodo che restituisce la somma dei prezzi appartenenti al prodotti del carrello.
+	 * @return
+	 */
+	
 	public void totalPrice() {
 		
-		
+		  
 	}
 	
 	ArrayList<CartProduct> productList;
