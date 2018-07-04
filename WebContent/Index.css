@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+nav ul li {
+	display: inline;
+	padding: 0 60px 0 60px;
+	
+	
+} 
+
+nav ul li a:link,nav ul li a:visited{
+	
+	color: grey;
+	text-decoration: none;
+}	
+	
+
+nav ul li a:hover {
+	color: white;
+}	
+
+body {
+	
+	background:url("Img/Foto.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed; 
+	
+}
+
+nav {
+	
+	background-color: #111;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right:0;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+div.container{
+	
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+
+
+footer {
+
+	clear: both;
+	text-align: center;
+	font-size: 15px;
+	position:absolute;
+	bottom: 0px;
+	right: 50%;	
+}
+
+div#loginform{
+	width: 30%;
+	height: 60%;
+	background-color: #4682b4;
+	top:25%;
+	left:35%;
+	position: absolute;
+	border-radius: 25px;
+	border-color: white;
+	border-style: groove;
+	
+}
+
+div form{
+	display: block;
+	text-align: center;
+}
+
+#form_container{
+    width: 85%;
+    height: 85%;
+    position: relative;
+    left: 7.5%;
+    top: 7.5%;
+}
+
+input.form{
+	margin: 8% 0 8% 0;
+	padding: 5px 5px 5px 5px;
+	width: 80%;
+	height: auto;
+}
+
+input#login_button{
+	
+	width: 50%;	
+}
+

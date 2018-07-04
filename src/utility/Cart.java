@@ -71,9 +71,9 @@ public class Cart  {
 	 * @param productToRemove
 	 */
 	
-	public void removeProduct(CartProduct productToRemove) {
+	public boolean removeProduct(CartProduct productToRemove) {
 		
-		productList.remove(productToRemove);
+		return productList.remove(productToRemove);
 		
 	}
 	

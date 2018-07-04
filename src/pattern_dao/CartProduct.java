@@ -126,7 +126,7 @@ public class CartProduct extends SellingProductDTO {
 	
 	public boolean isEmpty() {
 		
-		return this.quantita != 0;
+		return this.quantita == 0;
 	}
 	
 	/**
