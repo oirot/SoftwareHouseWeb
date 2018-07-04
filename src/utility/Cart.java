@@ -93,12 +93,19 @@ public class Cart  {
 	
 	/**
 	 * Metodo che restituisce la somma dei prezzi appartenenti al prodotti del carrello.
+	 * @return 
 	 * @return
 	 */
 	
-	public void totalPrice() {
+	public BigDecimal totalPrice() {
 		
-		  
+		BigDecimal tot = new BigDecimal(0);
+		
+		 	for(int i=0;i<productList.size();i++) {
+			 
+			 tot.add(productList.get(i).getPrice());
+		 }
+			return tot; 
 	}
 	
 	ArrayList<CartProduct> productList;
