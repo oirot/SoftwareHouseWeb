@@ -119,6 +119,24 @@ public class SellingProductDAO {
 		return true;
 	}
 	
+	
+	public ArrayList<Review> getRecensioniById(int id) throws SQLException{
+		ArrayList<Review> recensioni = new ArrayList<>();
+		
+		//leggi dal db le recensioni
+		PreparedStatement reviewStatementById = conn.prepareStatement(SQLStatemets.recensioniById);
+		reviewStatementById.setInt(0, id);
+		ResultSet rs = reviewStatementById.executeQuery();
+		reviewStatementById.close();
+		
+		//itera finchè ci sono recensioni nei risultati
+		while(rs.next()) {
+			recensioni.add(new Review(rs.getString(0), rs.getInt(1)));
+		}
+	
+		return recensioni;
+	}
+	
 	@Override
 	protected void finalize() throws Throwable {
 		try{conn.close();}
