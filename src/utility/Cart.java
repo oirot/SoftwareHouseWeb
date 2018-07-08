@@ -52,7 +52,7 @@ public class Cart  {
 	public void addProduct(CartProduct productToAdd) {
 		
 		boolean isPresent = false;
-		
+
 		for (CartProduct cartProduct : productList) {
 			if(cartProduct.getId() == productToAdd.getId()) {
 				cartProduct.addQuantity(productToAdd.getQuantity());
@@ -83,7 +83,7 @@ public class Cart  {
 	
 	public void removeAll() {
 		
-		productList.removeAll(productList);
+		productList = new ArrayList<>();
 	}
 	
 	public void modElement() {
@@ -106,6 +106,15 @@ public class Cart  {
 			 tot.add(productList.get(i).getPrice());
 		 }
 			return tot; 
+	}
+	
+	
+	/**
+	 * 
+	 * @return the number of products in the cart (unique items)
+	 */
+	public int itemCount() {
+		return productList.size();
 	}
 	
 	ArrayList<CartProduct> productList;
