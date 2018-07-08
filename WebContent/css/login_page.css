@@ -1,44 +1,21 @@
 @charset "UTF-8";
 
-nav ul li {
-	display: inline;
-	padding: 0 60px 0 60px;
-	
-	
-} 
-
-nav ul li a:link,nav ul li a:visited{
-	
-	color: grey;
-	text-decoration: none;
-}	
-	
-
-nav ul li a:hover {
-	color: white;
-}	
 
 body {
-	
-	background:url("Img/Foto1.jpg");
+	background:url("/SoftwareHouseWeb/images/background_login_blur.jpg");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+<<<<<<< HEAD:WebContent/Index.css
 	background-attachment: fixed; 
+=======
+	background-attachment: fixed;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 100%;
+>>>>>>> 810c699bdfd14dc7b2f0ba20ccc3ea50f8818478:WebContent/css/login_page.css
 }
 
-nav {
-	
-	background-color: #111;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	right:0;
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
-}
 
 div.container{
-	
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -47,30 +24,22 @@ div.container{
 }
 
 
-
-footer {
-
-	clear: both;
-	text-align: center;
-	font-size: 15px;
-	position:absolute;
-	bottom: 0px;
-	right: 50%;	
-}
-
-div form{
+form{
 	display:block;
 	text-align: center;
-	margin-top:25%;
 	margin-left: 0%;
 }
+
 
 #form_container{
     width: 30%;
     position: absolute;
     left: 60%;
-    top: 28%;
+    top: 32%;
+    border: thin solid #ffefd5;
+    border-radius: 25px;
 }
+
 
 input.form{
 	margin: 6% 0 10% 0;
@@ -80,25 +49,23 @@ input.form{
 	border-style: solid;
 	border-color: white;
 	border-radius: 10px;
+	font-weight: bold;
 }
 
+
 input#login_button{
-	
 	margin-top:4%;
 	width: 65%;	
 	padding: 10px 10px 10px 10px;
 }
 
-input:focus {
-	
-	color: #4169e1;
-	border-radius: 2px;
-	font-weight: bold;
 
+input:focus {
+	color: #4169e1;
 }
 
+
 h1 {
-	
 	position: absolute;
 	width: 30%;
 	right:50%;
@@ -108,13 +75,13 @@ h1 {
 	color: #daa520;
 }
 
-a {
-	
+
+a{
 	color: #4169e1
 }
 
+
 div#errorform{
-	
 	width: 30%;
 	height: 18%;
 	background-color: #ffefd5;
@@ -124,20 +91,26 @@ div#errorform{
 	border-radius: 25px;
 	border-color: white;
 	border-style: solid;
-	
 }
 
+
 input#error_button{
-	
 	margin-top:0%;
 	width: 65%;	
 	padding: 10px 10px 10px 10px;
 }
 
+
 p{
-	
 	margin-left: 5%;
 	margin-top: 10%;
 	color: #4169e1
-	
+}
+
+
+.bad_request{
+	visibility: hidden;
+	color: #cc0000;
+	font-size: 1.2em;
+	font-weight: bold;
 }

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
 	<Resource name="jdbc/software_house_web" auth="Container" diverClassName="com.mysql.jdbc.Driver" type="javax.sql.DataSource" username="root" password="Nc3Dug2SKVofEBJrhE3x" url="jdbc:mysql://localhost:3306/software_house_web"></Resource>
-	<Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="jdbc/software_house_web" userTable="utente" userNameCol="email" userCredCol="hashed_password" userRoleTable="possiede_ruolo" roleNameCol="nome"></Realm></Context>
+	<Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="jdbc/software_house_web" userTable="utente" userNameCol="email" userCredCol="hashed_password" userRoleTable="possiede_ruolo" roleNameCol="nome" localDataSource="true"></Realm></Context>
