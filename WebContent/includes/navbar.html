@@ -9,26 +9,41 @@
 <body>
 
 
-<div class="navbar">
-  <a href="#home">Home</a>
- 
-  <div class="dropdown">
-    <button class="dropbtn" onclick="myFunction()">Prodotti
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content" id="myDropdown">
-      <a href="#">Prodotto1</a>
-      <a href="#">PRODOTTO2</a>
-    </div>
-  </div> 
+<nav class="navbar">
+	<ul>
+
+		<li>
+			  <a href="#home">Home</a>
+		</li>
+			  
+		<li>
+			  <a href="#servizi">Prodotti</a>
+		</li>
+			  
+		<li>
+			  <a href="information.jsp">Info</a>
+			  
+		</li>
+			 
+	 	<li>
+			  <div class="dropdown">
+			  <button class="dropbtn"  onmouseenter="myFunction()">Servizi
+			  </button>
+			  <div class="dropdown-content" onmouseout="myFunction()" id="myDropdown">
+			   	  <a href="#">Management</a>
+			   	<a href="#">Area dipendenti</a>
+			 </div>
+			 </div>
+			 
+		</li>
+	  
+	</ul>
+  	  		  <a id="carrello" href="carrello.html"><img id="carrello" alt="icona_cart" src="/SoftwareHouseWeb/images/icona_cart.png" style="width: 45px;" style="height: 20px;"></a>
+  	  		  <a id="login" href="login.jsp"><img id="login" alt="icona_login" src="/SoftwareHouseWeb/images/icona_login.png" style="width: 25px;" style="height: 20px;"></a>
   
-  <a href="information.jsp">Info</a>
-  <a href="#servizi">Servizi</a>
-  <a href="carrello.html"><img alt="icona_cart" src="/SoftwareHouseWeb/images/icona_cart.png" style="width: 45px;" style="height: 20px;"></a>
-  <a href="login.jsp"><img alt="icona_login" src="/SoftwareHouseWeb/images/icona_login.png" style="width: 25px;" style="height: 20px;"></a>
-  
-  
-</div>
+</nav>
+
+
 
 <script>
 
@@ -48,82 +63,5 @@ window.onclick = function(e) {
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--  
-		<div class="nav-wrapper">
-
-   			<nav class="nav-menu" >
-   
-   				<ul class="clearfix">
-   				
-         			<li><a href="home.html">HOME</a></li>
-         			<li><a href="prodotti.html">PRODOTTI</a>
-         
-          				<ul class="sub-menu-prodotti">
-          				
-            				<li><a href="prodotto1.html">PROD1</a>
-            				</li>
-            				<li><a href="prodotto2.html">PROD2</a>
-            				</li>
-            				
-         				</ul>
-         			</li>
-         
-         			<li><a href="information.jsp">INFO</a>
-         			</li>
-         			
-         			<li><a href="servizi.html">SERVIZI</a>
-         
-          <ul class="sub-menu-servizi">
-          
-            <li><a href="management.html">MANAGEMENT</a></li>
-            <li><a href="area_dip.html">AREA DIPENDENTI</a></li>
-            
-         </ul>
-         </li>
-         	<li> <a href="carrello.html"><img alt="icona_cart" src="/SoftwareHouseWeb/images/icona_cart.png" style="width: 45px;" style="height: 20px;"></a></li>
-			<li> <a href="login.jsp"><img alt="icona_login" src="/SoftwareHouseWeb/images/icona_login.png" style="width: 25px;" style="height: 20px;"></a></li>
-         
-      		</ul>
-   
-   	
-   		</nav>
-	</div>
-	-->
 		
 
