@@ -15,7 +15,6 @@ public class InitContextListener implements ServletContextListener{
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		ServletContextListener.super.contextInitialized(e);
 		DataSource ds = null;
 		try {
 			ds = getDataSource();
@@ -25,6 +24,10 @@ public class InitContextListener implements ServletContextListener{
 			System.exit(-1);
 		}
 		e.getServletContext().setAttribute("software_ds", ds);
+		ServletContextListener.super.contextInitialized(e);
+		
+		
+		
 	}
 	
 	@Override
@@ -32,6 +35,7 @@ public class InitContextListener implements ServletContextListener{
 		// TODO Auto-generated method stub
 		ServletContextListener.super.contextDestroyed(sce);
 	}
+	
 	
 	private DataSource getDataSource() throws NamingException {
 		Context initCtx = new InitialContext();

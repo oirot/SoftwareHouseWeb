@@ -137,6 +137,13 @@ public class SellingProductDAO {
 		return recensioni;
 	}
 	
+	
+	public ArrayList<SellingProductDTO> getAllProducts() throws SQLException{		
+		PreparedStatement getAllPr = conn.prepareStatement(SQLStatemets.allProducts);
+		ResultSet rs = getAllPr.executeQuery();
+		return mapAllResultSetToSellingProduct(rs);
+	}
+	
 	@Override
 	protected void finalize() throws Throwable {
 		try{conn.close();}

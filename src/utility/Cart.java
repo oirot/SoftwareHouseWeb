@@ -5,6 +5,8 @@
 package utility;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Iterator;
+
 import pattern_dao.CartProduct;
 import pattern_dao.SellingProductDTO;
 
@@ -116,6 +118,12 @@ public class Cart  {
 	public int itemCount() {
 		return productList.size();
 	}
+	
+	
+	public Iterator<CartProduct> getElements(){
+		return productList.iterator();
+	}
+	
 	
 	ArrayList<CartProduct> productList;
 }
