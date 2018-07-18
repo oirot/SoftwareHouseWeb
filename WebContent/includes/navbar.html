@@ -3,23 +3,65 @@
 <head>
 	<meta charset="ISO-8859-1">
 	<title>navbar</title>
-	<link rel="stylesheet" href="/SoftwareHouseWeb/includes/navbar.css" type="text/css">
+	<base href="/SoftwareHouseWeb/">
+	<link rel="stylesheet" href="includes/navbar.css" type="text/css">
 </head>
 <body>
-			<nav>
-				
-				<ul>
-					
-					<li> <a href="home.html">HOME</a></li>
-					<li> <a href="prodotti.html">PRODOTTI</a></li>
-					<li> <a href="info.html">INFO</a></li>
-					<li> <a href="carrello.html">CARRELLO</a></li>
-					<li> <a href="servizi.html">SERVIZI</a></li>
-					<li> <a href="areadip.html">AREA DIPENDENTI</a></li>
-					<li> <a href="management.html">MANAGEMENT</a></li>
-					
-				</ul>
-				
-			</nav>	
+
+
+<nav class="navbar">
+	<ul>
+
+		<li>
+			  <a href="#home">Home</a>
+		</li>
+			  
+		<li>
+			  <a href="#servizi">Prodotti</a>
+		</li>
+			  
+		<li>
+			  <a href="information.jsp">Info</a>
+			  
+		</li>
+			 
+	 	<li>
+			  <div class="dropdown">
+			  <button class="dropbtn"  onmouseenter="myFunction()">Servizi
+			  </button>
+			  <div class="dropdown-content" onmouseout="myFunction()" id="myDropdown">
+			   	  <a href="#">Management</a>
+			   	<a href="#">Area dipendenti</a>
+			 </div>
+			 </div>
+			 
+		</li>
+	  
+	</ul>
+  	  		  <a id="carrello" href="carrello.html"><img id="carrello" alt="icona_cart" src="/SoftwareHouseWeb/images/icona_cart.png" style="width: 45px;" style="height: 20px;"></a>
+  	  		  <a id="login" href="login.jsp"><img id="login" alt="icona_login" src="/SoftwareHouseWeb/images/icona_login.png" style="width: 25px;" style="height: 20px;"></a>
+  
+</nav>
+
+
+
+<script>
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+</script>
+
 </body>
 </html>
+		
+
