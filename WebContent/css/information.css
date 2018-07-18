@@ -45,38 +45,76 @@ h1#leadership{
 	color: grey;
 }
 
+.testo_paragrafo a:hover {
+	color: white;
+}
 
-h1#azienda{
+
+#azienda{
 	
 	position: absolute;
 	width: 30%;
 	height: 20%;
 	top:65%;
 	left:3%;
-	font-size: 200%;
+	font-size: 100%;
 	color: gray;
 }
 
 
-h1#chi_siamo{
+div.testo_paragrafo p{
+	
+	border: 1px solid black;
+	opacity: 0.5;
+	background: black;
+	width: 80%;
+	padding: 0 2% 0 2px;
+}
+
+#chi_siamo{
 	
 	position: absolute;
 	width: 30%;
 	height: 20%;
 	top:65%;
-	left:40%;
-	font-size: 200%;
+	left:35%;
+	font-size: 100%;
 	color: gray;
 }
 
-h1#contatti{
+#contatti{
 	
 	position: absolute;
 	width: 30%;
 	height: 20%;
 	top:65%;
 	left:70%;
-	font-size: 200%;
+	font-size: 100%;
 	color: gray;
 }
 
+p {
+	
+	display: none
+	
+}
+
+
+img#freccia1{
+	
+	margin-top:34.5%;
+	margin-left:19%;
+}
+
+img#freccia2{
+	
+	margin-top:34.5%;
+	margin-left:24%;
+}
+
+
+img#freccia3{
+	
+	margin-top:34.5%;
+	margin-left:31.8%;
+}
