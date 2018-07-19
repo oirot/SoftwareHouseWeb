@@ -49,6 +49,10 @@ public class SellingProductDTO {
 		this.price = price;
 	}
 	
+	public SellingProductDTO(String name, BigDecimal price, String description, String version, String idaProgetto) {
+		this(0, name, price, description, version, idaProgetto);
+	}
+	
 	
 	private String replaceIfNull(String value, String def) {
 		if(value == null)

@@ -7,6 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.sql.DataSource;
+
+import com.mysql.jdbc.Statement;
+
 import utility.SQLStatemets;
 
 public class SellingProductDAO {
@@ -87,9 +90,11 @@ public class SellingProductDAO {
 	}
 	
 	public boolean insertOrUpdate(SellingProductDTO product) throws SQLException{
-		SellingProductDTO dbProduct = getProductById(product.getId());
+		SellingProductDTO dbProduct = null;
+		if(product.getId() != 0) {
+			dbProduct = getProductById(product.getId());
+		}
 		int rs;
-		PreparedStatement statementUsed;
 		if(dbProduct != null) {
 			PreparedStatement statementUpdateProduct = conn.prepareStatement(SQLStatemets.updateProduct);
 			
@@ -101,24 +106,48 @@ public class SellingProductDAO {
 			
 			rs = statementUpdateProduct.executeUpdate();
 			
-			statementUsed = statementUpdateProduct;
-		} else {
-			PreparedStatement statementInsertProduct = conn.prepareStatement(SQLStatemets.insertProduct);
+			statementUpdateProduct.close();
 			
+			if(rs == 1) {
+				PreparedStatement statementUpdateSellingProduct = conn.prepareStatement(SQLStatemets.updateSelling);
+				statementUpdateSellingProduct.setBigDecimal(1, product.getPrice());
+				statementUpdateSellingProduct.setInt(2, product.getId());
+				rs = statementUpdateSellingProduct.executeUpdate();
+				statementUpdateSellingProduct.close();
+			}
+		} else {
+			
+			java.sql.Statement getLastId = conn.createStatement();
+			ResultSet idSet = getLastId.executeQuery("SELECT id_prodotto FROM prodotto ORDER BY(id_prodotto) DESC LIMIT 1");
+			int id = 0;
+			if(idSet.next())
+				id = idSet.getInt(1) + 1;
+			
+			
+			
+			PreparedStatement statementInsertProduct = conn.prepareStatement(SQLStatemets.insertProduct);
+
 			statementInsertProduct.setString(1, product.getName());
 			statementInsertProduct.setString(2, product.getVersion());
 			statementInsertProduct.setString(3, product.getDescriprion());
 			statementInsertProduct.setString(4, product.getIdaProgetto());
-			
+			statementInsertProduct.setInt(5, id);
 			rs = statementInsertProduct.executeUpdate();
+			statementInsertProduct.close();
 			
-			statementUsed = statementInsertProduct;
+			if(rs == 1 && id != 0) {
+				PreparedStatement statementInsertSellingProduct = conn.prepareStatement(SQLStatemets.insertSelling);
+				statementInsertSellingProduct.setInt(1, id);
+				statementInsertSellingProduct.setBigDecimal(2, product.getPrice());
+				rs = statementInsertSellingProduct.executeUpdate();
+				statementInsertSellingProduct.close();
+			}else {
+				rs = 0;
+			}
 		}
 		if(rs != 1) {
-			statementUsed.close();
 			return false;
 		}
-		statementUsed.close();
 		return true;
 	}
 	
@@ -148,10 +177,18 @@ public class SellingProductDAO {
 		return mapAllResultSetToSellingProduct(rs);
 	}
 	
-	@Override
-	protected void finalize() throws Throwable {
+	
+	public void deleteProductById(int id) throws SQLException{
+		PreparedStatement deleteSt = conn.prepareStatement(SQLStatemets.deleteProduct);
+		deleteSt.setInt(1, id);
+		deleteSt.setInt(2, id);
+		deleteSt.executeQuery();
+		
+	}
+	
+	public void close()  {
 		try{conn.close();}
-		finally{super.finalize();}
+		catch(SQLException e) {}
 	}
 	
 }

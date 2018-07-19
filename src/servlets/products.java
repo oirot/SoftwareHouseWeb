@@ -42,6 +42,7 @@ public class products extends HttpServlet{
 			e.printStackTrace();
 		}
 		
+		if(sellingProductDAO != null) sellingProductDAO.close();
 		req.setAttribute("sellingList", productList);
 		getServletContext().getRequestDispatcher("/Prodotti.jsp").forward(req, resp);
 	}
