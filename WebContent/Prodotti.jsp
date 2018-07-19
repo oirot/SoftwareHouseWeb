@@ -12,9 +12,11 @@
 	</head>
 			<body>
 			
+			<jsp:include page="/includes/navbar.html"></jsp:include>
+				
 				
 				<h2>Prodotti</h2>
-				
+					
 				<%ArrayList<SellingProductDTO> prodotti = (ArrayList)request.getAttribute("sellingList"); 
 				
 				if(prodotti == null || prodotti.isEmpty() ) {%>
@@ -28,9 +30,10 @@
 				  <tr>
 				  
 				    <th>Nome</th>
-				    <th>Rilascio</th>
+				    <th>Descrizione</th>
 				    <th>Valutazione</th>
 				    <th>Prezzo</th>
+				    <th></th>
 				    
 				  </tr>
 				  
@@ -41,6 +44,7 @@
 				 	 
 				 	  <td><%=prodotti.get(i).getName()%></td>
 				 	  <td><%=prodotti.get(i).getDescriprion()%></td>
+				 	  <td><%=prodotti.get(i).getVersion()%></td>
 				      
 				 	  <td><%=prodotti.get(i).getPrice()%></td>
 				 	 

@@ -20,9 +20,7 @@ table {
 			border-collapse: collapse;
 			width: 100%;
 			
-		}
-					
-					
+		}		
 					
 td, th {
 			 border: 1px solid #dddddd;
@@ -34,5 +32,20 @@ td, th {
 tr:nth-child(even) {
 	
 					 	background-color: #dddddd;
+					 	background: rgba(255, 255, 255, 0.5);
 					 }
+
+tr:nth-child(odd){
+	
+	color: grey;
+}
+				 
+button{
+	
+	border-radius: 15px;
+	border-style: solid;
+	margin-left:30%;
+	background-color: #4181C0;
+	
+}
 					 
