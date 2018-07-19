@@ -43,7 +43,7 @@ public class products extends HttpServlet{
 		}
 		
 		req.setAttribute("sellingList", productList);
-		getServletContext().getRequestDispatcher("/prodotti.jsp").forward(req, resp);
+		getServletContext().getRequestDispatcher("/Prodotti.jsp").forward(req, resp);
 	}
 
 }

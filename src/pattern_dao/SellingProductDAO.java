@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
 import javax.sql.DataSource;
 import utility.SQLStatemets;
 
@@ -24,11 +23,11 @@ public class SellingProductDAO {
 	public SellingProductDTO getProductById(int id) throws SQLException{
 		PreparedStatement statementProductById = conn.prepareStatement(SQLStatemets.productById);
 		
-		statementProductById.setInt(0, id);
+		statementProductById.setInt(1, id);
 		ResultSet result = statementProductById.executeQuery();
-		
+		SellingProductDTO ret = mapResultSetToSellingProduct(result);
 		statementProductById.close();
-		return mapResultSetToSellingProduct(result);
+		return ret;
 	}
 	
 	public ArrayList<SellingProductDTO> getProductsByPrice(BigDecimal price, boolean isLower) throws SQLException{
@@ -37,36 +36,37 @@ public class SellingProductDAO {
 		PreparedStatement statementGetProductByPrice;
 		if(isLower) {
 			statementGetProductByPrice = conn.prepareStatement(SQLStatemets.productByPriceLower);
-			statementGetProductByPrice.setBigDecimal(0, price);
+			statementGetProductByPrice.setBigDecimal(1, price);
 			result = statementGetProductByPrice.executeQuery();
 		}
 		else {
 			statementGetProductByPrice = conn.prepareStatement(SQLStatemets.productByPriceHigher);
-			statementGetProductByPrice.setBigDecimal(0, price);
+			statementGetProductByPrice.setBigDecimal(1, price);
 			result = statementGetProductByPrice.executeQuery();
 		}
 		
+		ArrayList<SellingProductDTO> ret = mapAllResultSetToSellingProduct(result);
 		statementGetProductByPrice.close();
-		return mapAllResultSetToSellingProduct(result);
+		return ret;		
 	}
 	
 	public ArrayList<SellingProductDTO> getProductsByPriceRange(BigDecimal lowBound, BigDecimal highBound) throws SQLException{
 		PreparedStatement statementGetProductByPriceRange = conn.prepareStatement(SQLStatemets.productByPriceRange);
 		
-		statementGetProductByPriceRange.setBigDecimal(0, lowBound);
-		statementGetProductByPriceRange.setBigDecimal(1, highBound);
-		
-		statementGetProductByPriceRange.close();
-		
-		return mapAllResultSetToSellingProduct(statementGetProductByPriceRange.executeQuery());
+		statementGetProductByPriceRange.setBigDecimal(1, lowBound);
+		statementGetProductByPriceRange.setBigDecimal(2, highBound);
 
+		ArrayList<SellingProductDTO> ret = mapAllResultSetToSellingProduct(statementGetProductByPriceRange.executeQuery());
+		statementGetProductByPriceRange.close();
+		return ret;
 	}
 	
 	
 	private ArrayList<SellingProductDTO> mapAllResultSetToSellingProduct(ResultSet rs) throws SQLException{
 		ArrayList<SellingProductDTO> list = new ArrayList<>();
-		while(!rs.next()) {
-			list.add(mapResultSetToSellingProduct(rs));
+		SellingProductDTO iterRes;
+		while( (iterRes = mapResultSetToSellingProduct(rs)) != null){
+			list.add(iterRes);
 		}
 		return list;
 	}
@@ -78,7 +78,7 @@ public class SellingProductDAO {
 		}
 		SellingProductDTO sellingProduct = new SellingProductDTO();
 		sellingProduct.setId(result.getInt("id_prodotto"));
-		sellingProduct.setName(result.getString("descrizione"));
+		sellingProduct.setName(result.getString("nome_prodotto"));
 		sellingProduct.setPrice(result.getBigDecimal("prezzo"));
 		sellingProduct.setDescriprion(result.getString("descrizione"));
 		sellingProduct.setVersion(result.getString("versione"));
@@ -89,33 +89,36 @@ public class SellingProductDAO {
 	public boolean insertOrUpdate(SellingProductDTO product) throws SQLException{
 		SellingProductDTO dbProduct = getProductById(product.getId());
 		int rs;
+		PreparedStatement statementUsed;
 		if(dbProduct != null) {
 			PreparedStatement statementUpdateProduct = conn.prepareStatement(SQLStatemets.updateProduct);
 			
-			statementUpdateProduct.setString(0, product.getName());
-			statementUpdateProduct.setString(1, product.getVersion());
-			statementUpdateProduct.setString(2, product.getDescriprion());
-			statementUpdateProduct.setString(3, product.getIdaProgetto());
-			statementUpdateProduct.setInt(4, product.getId());
+			statementUpdateProduct.setString(1, product.getName());
+			statementUpdateProduct.setString(2, product.getVersion());
+			statementUpdateProduct.setString(3, product.getDescriprion());
+			statementUpdateProduct.setString(4, product.getIdaProgetto());
+			statementUpdateProduct.setInt(5, product.getId());
 			
 			rs = statementUpdateProduct.executeUpdate();
 			
-			statementUpdateProduct.close();
+			statementUsed = statementUpdateProduct;
 		} else {
 			PreparedStatement statementInsertProduct = conn.prepareStatement(SQLStatemets.insertProduct);
 			
-			statementInsertProduct.setString(0, product.getName());
-			statementInsertProduct.setString(1, product.getVersion());
-			statementInsertProduct.setString(2, product.getDescriprion());
-			statementInsertProduct.setString(3, product.getIdaProgetto());
+			statementInsertProduct.setString(1, product.getName());
+			statementInsertProduct.setString(2, product.getVersion());
+			statementInsertProduct.setString(3, product.getDescriprion());
+			statementInsertProduct.setString(4, product.getIdaProgetto());
 			
 			rs = statementInsertProduct.executeUpdate();
 			
-			statementInsertProduct.close();
+			statementUsed = statementInsertProduct;
 		}
 		if(rs != 1) {
+			statementUsed.close();
 			return false;
 		}
+		statementUsed.close();
 		return true;
 	}
 	
@@ -125,15 +128,16 @@ public class SellingProductDAO {
 		
 		//leggi dal db le recensioni
 		PreparedStatement reviewStatementById = conn.prepareStatement(SQLStatemets.recensioniById);
-		reviewStatementById.setInt(0, id);
+		reviewStatementById.setInt(1, id);
 		ResultSet rs = reviewStatementById.executeQuery();
-		reviewStatementById.close();
 		
 		//itera finchè ci sono recensioni nei risultati
 		while(rs.next()) {
 			recensioni.add(new Review(rs.getString(0), rs.getInt(1)));
 		}
-	
+		
+		reviewStatementById.close();
+
 		return recensioni;
 	}
 	
@@ -149,6 +153,7 @@ public class SellingProductDAO {
 		try{conn.close();}
 		finally{super.finalize();}
 	}
+	
 }
 
 

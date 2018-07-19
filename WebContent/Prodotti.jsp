@@ -44,7 +44,7 @@
 				      
 				 	  <td><%=prodotti.get(i).getPrice()%></td>
 				 	 
-				   	  <td id="btn_<%=prodotti.get(i).getId()%>"><button>Acquista</button></td>
+				   	  <td><button id="btn_<%=prodotti.get(i).getId()%> onclick="acquista(this)">Acquista</button></td>
 				   	  
 				   	</tr>
 				   	

@@ -39,11 +39,21 @@ public class SellingProductDTO {
 	
 	public SellingProductDTO(int id, String name, BigDecimal price, String description, String version, String idaProgetto) {
 		this.id = id;
-		this.name = name;
-		this.descriprion = description;
-		this.version = version;
-		this.idaProgetto = idaProgetto;
+		this.name = replaceIfNull(name, "non specificato");
+		this.descriprion = replaceIfNull(description, "nessuna descrizione");
+		this.version = replaceIfNull(version, "0.0");
+		this.idaProgetto = replaceIfNull(idaProgetto, "non specificato");
+		if(price == null) {
+			price = new BigDecimal(1);
+		}
 		this.price = price;
+	}
+	
+	
+	private String replaceIfNull(String value, String def) {
+		if(value == null)
+			return def;
+		return value;
 	}
 	
 	/**

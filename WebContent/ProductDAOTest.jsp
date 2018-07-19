@@ -10,7 +10,7 @@
 </head>
 <body>
 	<%!ArrayList<SellingProductDTO> list;%>
-	<%list = (ArrayList<SellingProductDTO>)request.getAttribute("SellingList");%>
+	<%list = (ArrayList<SellingProductDTO>)request.getAttribute("sellingList");%>
 	<% if(list != null){%>
 	<table>
 		<tr>
@@ -22,15 +22,15 @@
 			<td>version</td>
 		</tr>
 		<%for(SellingProductDTO prod : list) {%>
-		<tr>
-			<td><%=prod.getId()%></td>
-			<td><%=prod.getName()%></td>
-			<td><%=prod.getDescriprion()%></td>
-			<td><%=prod.getPrice().toPlainString()%></td>
-			<td><%=prod.getIdaProgetto()%></td>
-			<td><%=prod.getVersion()%></td>
-		</tr>
-		<%} %>
+			<tr>
+				<td><%=prod.getId()%></td>
+				<td><%=prod.getName()%></td>
+				<td><%=prod.getDescriprion()%></td>
+				<td><%=prod.getPrice().toPlainString()%></td>
+				<td><%=prod.getIdaProgetto()%></td>
+				<td><%=prod.getVersion()%></td>
+			</tr>
+		<%}%>
 	</table>
 	<%}%>
 </body>
