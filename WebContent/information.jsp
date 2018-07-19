@@ -10,7 +10,6 @@
 			<title>Information</title>
 			<base href="/SoftwareHouseWeb/">
 			<link rel= "stylesheet" href="css/information.css" type="text/css">			
-			<script src="javascript/information.js" type="text/javascript"></script>
 			
 			<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript">
 			</script>
