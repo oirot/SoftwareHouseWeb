@@ -12,8 +12,7 @@
 	</head>
 			<body>
 			
-			<jsp:include page="/includes/navbar.html"></jsp:include>
-				
+				<jsp:include page="/includes/navbar.html"></jsp:include>
 				
 				<h2>Prodotti</h2>
 					
