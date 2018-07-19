@@ -7,6 +7,7 @@
 		<head>
 		
 			<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+			<meta name="viewport" content="width=device-width, initial=1.0">
 			<title>Information</title>
 			<base href="/SoftwareHouseWeb/">
 			<link rel= "stylesheet" href="css/information.css" type="text/css">			
@@ -27,17 +28,13 @@
 			
 			<jsp:include page="/includes/navbar.html"></jsp:include>
 			
-				<div id="form_container">
+				<div id="container">
 				
 				<h1 id="frase_effetto">"Non seguire il sentiero: tracciane uno nuovo e lascia la tua impronta da seguire."</h1>
-				
-					<form action="j_security_check" method="post">
-				
-					</form>	
 					
 				</div>
 							
-				<img id="freccia1" alt="arrow" src="/SoftwareHouseWeb/images/arrow.png" style="width: 20px;" style="height: 6px;">
+				
 			
 				<div class="testo_paragrafo" id="azienda">
     				<h1>La nostra azienda</h1> 
@@ -48,17 +45,18 @@
    						 Oggi contiamo più di 60 dipendenti e 4 dipartimenti in continua espansione.</p>
 				</div>
 				
-				<img id="freccia2" alt="arrow" src="/SoftwareHouseWeb/images/arrow.png" style="width: 20px;" style="height: 6px;">
+				
 				
 				<div class="testo_paragrafo" id="chi_siamo">
 				
     				<h1>Chi Siamo</h1>
+    				
     					<p>Aiello V. e Sansone R. fondarono SoftwareHouseWeb nel lontano 2007 con sede principale in Salerno.
     					Tuttavia grazie alla loro voglia di mettersi in gioco ad oggi l'azienda possiede 5 diverse sedi in tutta Italia
     					e il suo nome è sinonimo di garanzia ed efficienza.</p>
 				</div>
 				
-				<img id="freccia3" alt="arrow" src="/SoftwareHouseWeb/images/arrow.png" style="width: 20px;" style="height: 6px;">
+				
 				
 				<div class="testo_paragrafo" id="contatti">
 				

@@ -11,7 +11,7 @@ body {
 	
 }
 
-div#form_container{
+div#container{
 	width: 50%;
 	height: 35%;
 	background-color: black;
@@ -49,13 +49,17 @@ h1#leadership{
 	color: white;
 }
 
+h1{
+	
+    
+}
+
 
 #azienda{
 	
 	position: absolute;
 	width: 30%;
-	height: 20%;
-	top:65%;
+	top:60%;
 	left:3%;
 	font-size: 100%;
 	color: gray;
@@ -68,15 +72,14 @@ div.testo_paragrafo p{
 	opacity: 0.5;
 	background: black;
 	width: 80%;
-	padding: 0 2% 0 2px;
+	padding: 0 2% 0 2%;
 }
 
 #chi_siamo{
 	
 	position: absolute;
 	width: 30%;
-	height: 20%;
-	top:65%;
+	top:60%;
 	left:35%;
 	font-size: 100%;
 	color: gray;
@@ -86,8 +89,7 @@ div.testo_paragrafo p{
 	
 	position: absolute;
 	width: 30%;
-	height: 20%;
-	top:65%;
+	top:60%;
 	left:70%;
 	font-size: 100%;
 	color: gray;
@@ -95,26 +97,7 @@ div.testo_paragrafo p{
 
 p {
 	
-	display: none
+	display: block;
 	
 }
 
-
-img#freccia1{
-	
-	margin-top:34.5%;
-	margin-left:19%;
-}
-
-img#freccia2{
-	
-	margin-top:34.5%;
-	margin-left:24%;
-}
-
-
-img#freccia3{
-	
-	margin-top:34.5%;
-	margin-left:31.8%;
-}
