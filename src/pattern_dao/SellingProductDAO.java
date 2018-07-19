@@ -181,10 +181,18 @@ public class SellingProductDAO {
 	public void deleteProductById(int id) throws SQLException{
 		PreparedStatement deleteSt = conn.prepareStatement(SQLStatemets.deleteProduct);
 		deleteSt.setInt(1, id);
-		deleteSt.setInt(2, id);
-		deleteSt.executeQuery();
+		deleteSt.executeUpdate();
+		deleteSt.close();
+		
+		deleteSt = conn.prepareStatement(SQLStatemets.deleteProductSelling);
+		deleteSt.setInt(1, id);
+		deleteSt.executeUpdate();
+		deleteSt.close();
 		
 	}
+	
+	
+	
 	
 	public void close()  {
 		try{conn.close();}

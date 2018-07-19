@@ -47,10 +47,12 @@ public class addProduct extends HttpServlet{
 				desc = "nessuna descrizione";
 			}
 			
-		
+			int id = 0;
+			if(parameters.containsKey("id"))
+				id = Integer.parseInt(parameters.get("id")[0]);
 			boolean ret = false;
 			try {
-			ret = sellingProductDAO.insertOrUpdate(new SellingProductDTO(nome, prezzo, desc, version, ida));
+			ret = sellingProductDAO.insertOrUpdate(new SellingProductDTO(id, nome, prezzo, desc, version, ida));
 			}catch(SQLException e) {
 				e.printStackTrace();
 				out.print("exc");
