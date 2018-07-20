@@ -28,7 +28,7 @@ public class addToCart extends HttpServlet{
 			cart = new Cart();
 		
 		Map<String, String[]>parameters= request.getParameterMap();
-		response.setContentType("text");
+		response.setContentType("text/json");
 		PrintWriter out = response.getWriter();
 		if(parameters.containsKey("id")){
 			SellingProductDAO sellingProductDAO = null;
@@ -40,9 +40,10 @@ public class addToCart extends HttpServlet{
 			SellingProductDTO prod = null;
 			try{
 				prod = sellingProductDAO.getProductById(Integer.parseInt(parameters.get("id")[0]));
+				sellingProductDAO.close();
 			}catch(SQLException e) {
 				e.printStackTrace();
-				out.print("0");
+				out.print("{val:0}");
 			}
 			
 			int quantity = 1;
@@ -52,13 +53,18 @@ public class addToCart extends HttpServlet{
 			if(prod != null)
 				cart.addProduct(new CartProduct(prod, quantity));
 			else {
-				out.print("0.");
+				out.print("{val:0.}");
 			}
 		session.setAttribute("cart", cart);
 		}else {
-			out.print("id");
+			out.print("{err: 'id'}");
 		}
-		out.print("1");
+		out.print("{val:1}");
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		this.doGet(req, resp);
 	}
 	
 }

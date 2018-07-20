@@ -69,4 +69,9 @@ public class addProduct extends HttpServlet{
 		}
 		out.print("ammostr");	
 	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		this.doGet(req, resp);
+	}
 }

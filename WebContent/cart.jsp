@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Carello</title>
 </head>
 <body>
@@ -28,20 +28,26 @@
 					<th>Nome</th>
 					<th>Descrizione</th>
 					<th>Costo Unitario</th>
+					<th>Quantità</th>
 					<th>Totale</th>		
 				</tr>
 			<%
+			BigDecimal totalPrice = new BigDecimal("0");
 			while(cartIter.hasNext()){
 				cartProduct = cartIter.next();
+				BigDecimal itemsPrice = cartProduct.getPrice().multiply(new BigDecimal(cartProduct.getQuantity()));
+				totalPrice = totalPrice.add(itemsPrice);
 			%>
 				<tr>
-					<th><%=cartProduct.getName()%></th>
-					<th><%=cartProduct.getDescriprion()%></th>
-					<th><%=cartProduct.getPrice().toString()%></th>
-					<th><%=cartProduct.getPrice().multiply(new BigDecimal(cartProduct.getQuantity())).toString()%></th>		
+					<td><%=cartProduct.getName()%></td>
+					<td><%=cartProduct.getDescriprion()%></td>
+					<td><%=cartProduct.getPrice().toString()%></td>
+					<td><%=cartProduct.getQuantity()%></td>
+					<th><%=itemsPrice.toString()%></th>		
 				</tr>
 			<%}%>	
 			</table>
+			<p>Totale: <%=totalPrice%></p>
 		</div>
 	<%}else{%>
 		<div>
