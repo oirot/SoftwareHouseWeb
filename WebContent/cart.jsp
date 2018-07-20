@@ -13,15 +13,15 @@
 </head>
 <body>
 	<jsp:include page="includes/navbar.html"></jsp:include>
-	<%Cart cart = (Cart)pageContext.getAttribute("cart");
+	<%Cart cart = (Cart)session.getAttribute("cart");
 	Iterator<CartProduct> cartIter = null;
 	if(cart != null){
 	 cartIter = cart.getElements();
 	}
-	CartProduct cartProduct;
-	if(cart != null && cartIter != null){%>
+	CartProduct cartProduct;%>
 	<div id="container">
 		<h1>Carello</h1>
+		<%if(cart != null && cartIter != null){%>	
 		<div id="info_prod">
 			<table>
 				<tr>
@@ -43,14 +43,14 @@
 			<%}%>	
 			</table>
 		</div>
-	}else{%>
+	<%}else{%>
 		<div>
 			<h2>
 				Nessun prodotto selezionato
 			</h2>
 			<div id="please-buy">
 				<p>
-					Non hai nessun prodotto nel carrello, vai <a href="prodotti.jsp">qui</a> per
+					Non hai nessun prodotto nel carrello, vai <a href="products">qui</a> per
 					ottenere una lista comprensiva dei prodotti offerti
 				</p>
 			</div>

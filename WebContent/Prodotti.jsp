@@ -48,7 +48,7 @@
 				      
 				 	  <td><%=prodotti.get(i).getPrice()%></td>
 				 	 
-				   	  <td><button id="btn_<%=prodotti.get(i).getId()%> onclick="acquista(this)">Acquista</button></td>
+				   	  <td><button id="btn_<%=prodotti.get(i).getId()%>" onclick="acquista(this)">Acquista</button></td>
 				   	  
 				   	</tr>
 				   	
@@ -56,6 +56,8 @@
 				  
 				 <%}%>
 				</table>
-				
+			<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+			<script src="javascript/prodotti.js" type="text/javascript"></script>
+	
 			</body>
 </html>
