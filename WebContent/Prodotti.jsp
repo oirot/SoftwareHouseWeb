@@ -47,7 +47,8 @@
 				      
 				 	  <td><%=prodotti.get(i).getPrice()%></td>
 				 	 
-				   	  <td><button id="btn_<%=prodotti.get(i).getId()%>" onclick="acquista(this)">Acquista</button></td>
+				   	  <td><button id="btn_<%=prodotti.get(i).getId()%>" onclick="acquista(this)">Acquista</button>
+				   	  <input class="input_quantity" id="q_<%=prodotti.get(i).getId()%>"type="number" name="quantity" min="0" max="100" value="1"></td>
 				   	  
 				   	</tr>
 				   	
