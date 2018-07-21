@@ -1,9 +1,8 @@
 @charset "UTF-8";
 
-
 body {
-	background:url("/SoftwareHouseWeb/images/backgroung_login_math.png");
-	background-size: 100% 100%;
+	background:url("/SoftwareHouseWeb/images/background_login_math.png");
+	background-size: cover ;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	font-family: "Times New Roman", Times, serif;
@@ -11,6 +10,48 @@ body {
 	
 }
 
+.leader_foto{
+	
+	border-radius: 50%;
+}
+
+
+
+
+
+div.testo_paragrafo p{
+	
+	border: 1px solid black;
+	opacity: 0.5;
+	background: black;
+	width: 80%;
+	padding: 0 2% 0 2%;
+}
+
+p {
+	
+	display: block;
+	
+}
+
+#azienda{
+	
+	color: gray;
+}
+
+#chi_siamo{
+	
+	color: gray;
+}
+
+#contatti{
+	
+	color: gray;
+}
+
+@media  screen and (min-width: 1141px) {
+	
+	
 div#container{
 	width: 50%;
 	height: 35%;
@@ -20,17 +61,17 @@ div#container{
 	left:5%;
 	position: absolute;
 }
-
-h1#frase_effetto{
 	
-	position: absolute;
-	width: 80%;
-	height: 40%;
-	left:5%;
-	top:3%;
-	padding-left:20px;
-	font-size: 250%;
-	color: grey;
+#raff{
+	
+	margin-left:120%;
+	-webkit-transform:translatey(-104%);
+	
+}
+
+#vitto{
+	
+	margin-top:20%;
 }
 
 h1#leadership{
@@ -45,15 +86,21 @@ h1#leadership{
 	color: grey;
 }
 
+h1#frase_effetto{
+	
+	position: absolute;
+	width: 80%;
+	height: 40%;
+	left:5%;
+	top:3%;
+	padding-left:20px;
+	font-size: 250%;
+	color: grey;
+}
+
 .testo_paragrafo a:hover {
 	color: white;
 }
-
-h1{
-	
-    
-}
-
 
 #azienda{
 	
@@ -62,17 +109,6 @@ h1{
 	top:60%;
 	left:3%;
 	font-size: 100%;
-	color: gray;
-}
-
-
-div.testo_paragrafo p{
-	
-	border: 1px solid black;
-	opacity: 0.5;
-	background: black;
-	width: 80%;
-	padding: 0 2% 0 2%;
 }
 
 #chi_siamo{
@@ -82,7 +118,6 @@ div.testo_paragrafo p{
 	top:60%;
 	left:35%;
 	font-size: 100%;
-	color: gray;
 }
 
 #contatti{
@@ -95,9 +130,119 @@ div.testo_paragrafo p{
 	color: gray;
 }
 
-p {
-	
-	display: block;
-	
+
 }
 
+/***************************************************************************************************************************************/
+
+
+
+@media  screen and (max-width: 1140px) {
+	
+    body {
+    		
+			    
+    
+    }
+    
+h1#frase_effetto{
+    
+	position: relative;
+	width: 80%;
+	height: 40%;
+	left:5%;
+	top:3%;
+	padding-left:20px;
+	font-size: 120%;
+	color: grey;
+    
+}
+    
+h1#leadership{
+	
+	position: relative;
+	margin-top:15%;
+	margin: collapse;
+	width: 15%;
+	height: 20%;
+	left:28%;
+	top:30%;
+	padding-left:20px;
+	font-size: 150%;
+	color: grey;
+}    
+    
+.leader_foto{
+    
+    width:100%; 
+    
+ }
+    
+#vitto{
+	
+	margin-top: 2%;
+	margin-left:0%;
+	display: none;
+}
+
+#raff{
+	
+	margin-top:2%;
+	margin-left:120%;
+	-webkit-transform:translatey(-104%);
+	display:none;
+}
+
+div#container{
+	width: 90%;
+	height: 20%;
+	background-color: black;
+	opacity:0.5;
+	top: 10%;
+	left:8%;
+	position: relative;
+}
+    
+#azienda{
+	
+	position: relative;
+	width:90%;
+	top:50%;
+	left:12.5%;
+	font-size: 70%;
+}
+
+#chi_siamo{
+	
+	position: relative;
+	width: 90%;
+	top:75%;
+	left:12.5%;
+	font-size: 70%;
+}
+
+#contatti{
+	
+	position: relative;
+	width: 90%;
+	top:95%;
+	left:12.5%;
+	font-size: 70%;
+}
+
+
+
+#testo_info1{
+	
+	margin-left:15.5%;
+}
+
+#testo_info2{
+	
+	margin-left:26%;
+}
+
+#testo_info3{
+	
+	margin-left:28%;
+}

@@ -1,5 +1,9 @@
 @charset "ISO-8859-1";
 
+@media screen and (min-device-width: 1141px){
+	
+
+
 footer {
 	clear: both;
 	text-align: center;
@@ -7,4 +11,17 @@ footer {
 	position:absolute;
 	bottom: 0px;
 	right: 50%;	
+}
+}
+
+@media screen and (max-device-width: 1140px){
+	
+	footer {
+	
+	clear: both;
+	text-align: center;
+	font-size: 15px;
+	position:relative;
+}
+	
 }
