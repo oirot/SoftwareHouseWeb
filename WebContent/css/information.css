@@ -1,14 +1,5 @@
 @charset "UTF-8";
 
-body {
-	background:url("/SoftwareHouseWeb/images/background_login_math.png");
-	background-size: cover ;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	font-family: "Times New Roman", Times, serif;
-	font-size: 100%;
-	
-}
 
 .leader_foto{
 	

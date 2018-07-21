@@ -1,13 +1,5 @@
 @charset "ISO-8859-1";
 
-body {
-	background:url("/SoftwareHouseWeb/images/backgroung_login_math.png");
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	font-family: "Times New Roman", Times, serif;
-	font-size: 100%;
-}
 
 p{
 	
@@ -19,7 +11,6 @@ button{
 	
 	border-radius: 15px;
 	border-style: solid;
-	margin-left:30%;
 	background-color: #4181C0;
 	
 }

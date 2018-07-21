@@ -8,7 +8,9 @@ function acquista(e){
 		var quantity_prod = $("#q_" + id_prod).val();
 		var data = new Object;
 		$.ajax("/SoftwareHouseWeb/addToCart", {
-		    dataType: "text",
+		    dataType: "text/json",
+		    data:{id:id_prod, quantity:quantity_prod},
+		    type:"POST",
 		    success: function() {
 		        alert("Il prodotto &egrave; stato aggiunto al carrello");
 		    },
