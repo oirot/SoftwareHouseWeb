@@ -24,3 +24,5 @@ hs_err_pid*
 /build/
 
 .settings/*
+
+WebContent/META-INF/context.xml
