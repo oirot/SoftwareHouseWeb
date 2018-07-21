@@ -48,6 +48,8 @@
 			<%}%>	
 			</table>
 			<p>Totale: <%=totalPrice%></p>
+			<button type="button" onclick="reset()">Reset</button>
+			<button type="button" onclick="acquista()">Acquista</button>
 		</div>
 	<%}else{%>
 		<div>
@@ -64,6 +66,16 @@
 
 	<%}%>
 	</div>
+	<script type="text/javascript">
+		function reset(){
+			window.location.replace("/SoftwareHouseWeb/resetCart")
+		}
+		
+		function acquista(){
+			alert("Prodotti acquistati");
+			reset();
+		}
+	</script>
 	<jsp:include page="includes/footer.html"></jsp:include>
 	
 </body>
