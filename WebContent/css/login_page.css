@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 
-div.container{
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	right: 0;
+body {
+	background:url("/SoftwareHouseWeb/images/background_login_math.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 100%;
 }
-
 
 form{
 	display:block;
@@ -18,15 +18,29 @@ form{
 	border-radius: 25px;
 }
 
-
-#form_container{
-    width: 30%;
-    position: absolute;
-    left: 60%;
-    top: 32%;
-    border: none;
+p{
+	margin-left: 5%;
+	margin-top: 10%;
+	color: #4169e1
 }
 
+
+.bad_request{
+	visibility: hidden;
+	color: #cc0000;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+a{
+	color: #4169e1
+}
+
+h1{
+	color: #daa520;
+	padding: 20px 20px 20px 20px;
+	position: absolute;
+}
 
 input.form{
 	margin: 6% 0 10% 0;
@@ -39,6 +53,30 @@ input.form{
 	font-weight: bold;
 }
 
+#form_container{
+    width: 30%;
+    position: absolute;
+    left: 60%;
+    top: 32%;
+    border: none;
+}
+
+
+@media screen and (min-device-width:1141px){
+
+div.container{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+#form_container{
+    width: 30%;
+    left: 60%;
+    top: 32%;
+}
 
 input#login_button{
 	margin-top:4%;
@@ -47,20 +85,12 @@ input#login_button{
 }
 
 h1 {
-	position: absolute;
+
 	width: 30%;
 	right:50%;
 	top:45%;
-	padding: 20px 20px 20px 20px;
 	font-size: 350%;
-	color: #daa520;
 }
-
-
-a{
-	color: #4169e1
-}
-
 
 div#errorform{
 	width: 30%;
@@ -81,17 +111,25 @@ input#error_button{
 	padding: 10px 10px 10px 10px;
 }
 
-
-p{
-	margin-left: 5%;
-	margin-top: 10%;
-	color: #4169e1
 }
 
+/************************************************************************************************************************/
 
-.bad_request{
-	visibility: hidden;
-	color: #cc0000;
-	font-size: 1.2em;
-	font-weight: bold;
+
+
+@media  screen and (max-width: 1140px) {
+	
+	
+#form_container{
+    width: 90%;
+    left: 9%;
+    top: 30%;
+}
+
+h1 {
+	width: 30%;
+	right:62%;
+	top:5%;
+	font-size: 280%;
+	
 }
