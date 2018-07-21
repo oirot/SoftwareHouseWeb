@@ -26,7 +26,8 @@ public class addProduct extends HttpServlet{
 		PrintWriter out = response.getWriter();
 		if(parameters.containsKey("nome") &&
 			parameters.containsKey("ida") &&
-			parameters.containsKey("prezzo")){
+			parameters.containsKey("prezzo") &&
+			parameters.containsKey("version")){
 			
 			
 			
