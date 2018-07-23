@@ -2,16 +2,57 @@
 
 
 p{
-	
 	color:grey;
 }
 
 
 button{
-	
+/*	
 	border-radius: 15px;
 	border-style: solid;
 	background-color: #4181C0;
-	
+	*/
 }
 					 
+.modify{
+	cursor: pointer;
+}
+
+
+.btn_container{
+	width: 100%;
+	height: 100%;
+		
+}
+
+
+.input_quantity{
+	width: 4em;	
+}
+	
+	
+.btn_acq{
+	cursor: pointer;
+	width: inherit;
+	height: inherit;
+	color: black;
+	border: none;
+	text-align: center;
+	padding: 3px;
+}
+
+tr:nth-child(even) .btn_acq{
+	background-color: #aaa;
+}
+
+tr:nth-child(even) .btn_acq:hover{
+	background-color: #ddd;
+}
+
+tr:nth-child(odd) .btn_acq{
+	background-color: #69f;
+}
+
+tr:nth-child(odd) .btn_acq:hover{
+	background-color: #224a5a;
+}
