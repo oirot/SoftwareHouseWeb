@@ -8,8 +8,8 @@ footer {
 	clear: both;
 	text-align: center;
 	font-size: 15px;
-	position:absolute;
-	bottom: 0px;
+	position:fixed;
+	bottom: 1%;
 	right: 50%;	
 }
 }
@@ -21,7 +21,8 @@ footer {
 	clear: both;
 	text-align: center;
 	font-size: 15px;
-	position:relative;
+	position:fixed;
+	bottom: 1%;
 }
 	
 }

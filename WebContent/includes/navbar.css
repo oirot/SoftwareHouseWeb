@@ -20,6 +20,29 @@ nav ul{
 	list-style-type: none;
 }
 
+#servizi:hover {
+	
+	color:white;
+	text-decoration: none;
+	
+}
+
+img#login{
+	position: absolute;
+	padding-top: 0.8%;
+}
+
+img#carrello {
+	position: absolute;
+	padding-top: 0.8%;
+}
+
+#servizi{
+	
+	color:grey;
+	text-decoration: none;
+}
+
 @media screen and (min-device-width: 1141px){
 
 .navbar {
@@ -30,8 +53,6 @@ nav ul{
 	text-align: left;
 	
 }
-
-
 
 .navbar a {
     float: left;
@@ -48,18 +69,6 @@ nav ul{
 	color: white;
 }
 
-#servizi{
-	
-	color:grey;
-	text-decoration: none;
-}
-
-#servizi:hover {
-	
-	color:white;
-	text-decoration: none;
-	
-}
 
 
 .dropdown {
@@ -121,17 +130,16 @@ nav ul li{
 }
 
 img#carrello {
-	position: absolute;
+	
 	left:91%;
 	top:3%;
-	padding-top: 0.8%;
+	
 }
 
 img#login{
-	position: absolute;
+	
 	left:94%;
 	top:3%;
-	padding-top: 0.8%;
 }
 }
 
@@ -173,20 +181,6 @@ nav ul li{
 .navbar a:hover {
 	color: white;
 }
-
-#servizi{
-	
-	color:grey;
-	text-decoration: none;
-}
-
-#servizi:hover {
-	
-	color:white;
-	text-decoration: none;
-	
-}
-
 
 .dropdown {
     float: left;
@@ -255,12 +249,12 @@ img#carrello {
 	position: absolute;
 	left:81%;
 	top:15%;
-	padding-top: 0.8%;
+	
 }
 
 img#login{
-	position: absolute;
+
 	left:90%;
 	top:15%;
-	padding-top: 0.8%;
+	
 }
