@@ -44,12 +44,13 @@ function modify(e){
 	currentInMod.price = $("#price_" + id).html();
 	currentInMod.ida = $("#ida_" + id).html();
 	
-	$("#name_" + id).html('<input type="text" id="upl_name" value="'+ currentInMod.name +'">');
-	$("#description_" + id).html('<input type="text" id="upl_desc" value="'+ currentInMod.description +'">');
-	$("#version_" + id).html('<input type="text" id="upl_vers" value="'+ currentInMod.version +'">');
-	$("#price_" + id).html('<input type="number" id="upl_prez" value="'+ currentInMod.price +'">');
+	$("#name_" + id).html('<input type="text" maxlenght="30" id="upl_name" value="'+ currentInMod.name +'">');
+	$("#description_" + id).html('<textarea id="upl_desc">' + currentInMod.description + '</textarea>');
+	$("#version_" + id).html('<input type="text" maxlenght="3" id="upl_vers" value="'+ currentInMod.version +'">');
+	$("#price_" + id).html('<input type="number" id="upl_prez" class="input_price" step="0.25" value="'+ currentInMod.price +'">');
 	$("#ida_" + id).html('<input type="text" id="upl_ida" value="'+ currentInMod.ida +'">');
 	$("#save_" + id).prop("disabled", false);
+	$("#description_" + id).val();
 }
 function add(){
 	var data = new Object;
@@ -64,7 +65,8 @@ function add(){
 	    data:data,
 	    type:"POST",
 	    success: function() {
-	        location.reload();
+	    	console.log();
+	    	location.reload();
 	    },
 	    error: function(jqXHR, textStatus, errorThrown) {
 	    	alert("Nun se po fa");
@@ -73,8 +75,11 @@ function add(){
 	});
 }
 
+var saveId;
+
 function save(e){
 	var id = $(e).attr("id").split('_')[1];
+	saveId = id;
 	var data = new Object;
 	data.id = id;
 	data.nome = $("#upl_name").val();
@@ -87,8 +92,8 @@ function save(e){
 	    dataType: "text",
 	    data:data,
 	    type:"POST",
-	    success: function() {
-	        location.reload();
+	    success: function(){
+	    	location.reload();
 	    },
 	    error: function(jqXHR, textStatus, errorThrown) {
 	    	alert("Nun se po fa");

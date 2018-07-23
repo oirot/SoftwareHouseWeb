@@ -25,34 +25,11 @@ button{
 		
 }
 
-
 .input_quantity{
 	width: 4em;	
 }
-	
-	
-.btn_acq{
-	cursor: pointer;
-	width: inherit;
-	height: inherit;
-	color: black;
-	border: none;
-	text-align: center;
-	padding: 3px;
+
+.input_price{
+	width: 6em;
 }
 
-tr:nth-child(even) .btn_acq{
-	background-color: #aaa;
-}
-
-tr:nth-child(even) .btn_acq:hover{
-	background-color: #ddd;
-}
-
-tr:nth-child(odd) .btn_acq{
-	background-color: #69f;
-}
-
-tr:nth-child(odd) .btn_acq:hover{
-	background-color: #224a5a;
-}

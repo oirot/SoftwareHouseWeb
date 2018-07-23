@@ -44,7 +44,7 @@ public class products extends HttpServlet{
 		
 		if(sellingProductDAO != null) sellingProductDAO.close();
 		req.setAttribute("sellingList", productList);
-		if((req.getServletPath()).startsWith("/manager/")) {
+		if((req.getServletPath()).startsWith("/management/")) {
 			getServletContext().getRequestDispatcher("/restricted/modifica-prodotti.jsp").forward(req, resp);
 
 		}else {
