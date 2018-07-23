@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 import pattern_dao.SellingProductDAO;
 import pattern_dao.SellingProductDTO;
 
-@WebServlet("/products")
+@WebServlet(urlPatterns= {"/products", "/management/products"})
 public class products extends HttpServlet{
 	
 	
@@ -44,7 +44,13 @@ public class products extends HttpServlet{
 		
 		if(sellingProductDAO != null) sellingProductDAO.close();
 		req.setAttribute("sellingList", productList);
-		getServletContext().getRequestDispatcher("/Prodotti.jsp").forward(req, resp);
+		if((req.getServletPath()).startsWith("/manager/")) {
+			getServletContext().getRequestDispatcher("/restricted/modifica-prodotti.jsp").forward(req, resp);
+
+		}else {
+			getServletContext().getRequestDispatcher("/restricted/Prodotti.jsp").forward(req, resp);
+
+		}
 	}
 
 }

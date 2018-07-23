@@ -12,6 +12,16 @@
   		<url-pattern>/registered/*</url-pattern></web-resource-collection>
   	<auth-constraint>
   		<role-name>registered</role-name></auth-constraint></security-constraint>
+  <security-constraint>
+  	<web-resource-collection>
+  		<web-resource-name>restricted</web-resource-name>
+  		<url-pattern>/restricted/*</url-pattern></web-resource-collection></security-constraint>
+  <security-constraint>
+  	
+  	<web-resource-collection>
+  		<web-resource-name>management</web-resource-name>
+  		<url-pattern>/management/*</url-pattern></web-resource-collection><auth-constraint>
+  		<role-name>management</role-name></auth-constraint></security-constraint>
   <login-config>
   	<auth-method>FORM</auth-method>
   	<form-login-config>
