@@ -1,0 +1,84 @@
+@charset "ISO-8859-1";
+
+#container{
+	
+	height: 100%;
+	width: 100%;
+}
+
+#text_container{
+	
+	margin-top: 5%;
+	margin-left: 28%;
+	color: grey;
+}
+
+p{
+	
+	margin-left: 0.5%;
+	font-weight: bold;
+}
+
+#form_container{
+	
+	margin-top:5%;
+	margin-left: 50%;
+}
+
+form{
+	
+	display: table;
+	width: 80%;
+	text-align: center;
+	margin-left: 0%;
+	background:url("/SoftwareHouseWeb/images/backgroud_login_form_container.jpg");
+	border-radius: 25px;
+
+}
+
+div.tableRow{
+	
+	display: table-row;
+}
+
+div.tableRow p{
+	
+	display: table-cell;
+	vertical-align: top;
+	padding: 4%;
+	font-size: 120%;
+	color:#daa520;
+	
+}
+
+input{
+	
+	width: 85%;
+	padding: 10px 10px 10px 10px;
+	background-color:#fff5ee;
+	border-style: hidden;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 70%;
+
+}
+
+#button{
+	
+	width: 50%;
+	margin-left: 260%;
+}
+
+h2{
+	color: #daa520;
+	padding: 20px 20px 20px 20px;
+	position: absolute;
+	margin-top: 20%;
+	font-size: 300%;
+	margin-left: 5%;
+}
+
+a{
+	color: #4169e1
+}
+
