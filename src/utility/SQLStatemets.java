@@ -19,4 +19,7 @@ public final class SQLStatemets {
 	public static final String userById = "SELECT * FROM utente WHERE id_utente = ?";
 	public static final String userByEmail = "SELECT * FROM utente WHERE email = ?";
 	public static final String addUser = "INSERT utente(nome, cognome, email, hashed_password, data_nascita) VALUES(?,?,?,?,?)";
+
+
+	public static final String addReview = "INSERT recensione(id_prodotto, commento, no_stelle) VALUES(?,?,?)";
 }

@@ -178,7 +178,7 @@ public class SellingProductDAO {
 	}
 	
 	
-	public void deleteProductById(int id) throws SQLException{
+	public boolean deleteProductById(int id) throws SQLException{
 		PreparedStatement deleteSt = conn.prepareStatement(SQLStatemets.deleteProduct);
 		deleteSt.setInt(1, id);
 		deleteSt.executeUpdate();
@@ -186,13 +186,36 @@ public class SellingProductDAO {
 		
 		deleteSt = conn.prepareStatement(SQLStatemets.deleteProductSelling);
 		deleteSt.setInt(1, id);
-		deleteSt.executeUpdate();
+		int ret = deleteSt.executeUpdate();
 		deleteSt.close();
-		
+		if(ret == 1) {
+			return true;
+		}
+		return false;
 	}
 	
 	
+	public float RateOfId(int id) throws SQLException{
+		ArrayList<Review> reviews = getRecensioniById(id);
+		int sum = 0;
+		for(int i = 0; i < reviews.size(); i++) {
+			sum += reviews.get(i).getStars();
+		}
+		return (float)sum / reviews.size();
+	}
 	
+	public boolean addReview(int id, Review review) throws SQLException{
+		PreparedStatement st = conn.prepareStatement(SQLStatemets.addReview);
+		st.setInt(1, id);
+		st.setString(2, review.getComment());
+		st.setInt(3, review.getStars());
+		int ret = st.executeUpdate();
+		st.close();
+		if(ret == 1) {
+			return true;
+		}
+		return false;
+	}
 	
 	public void close()  {
 		try{conn.close();}
