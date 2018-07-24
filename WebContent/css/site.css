@@ -43,15 +43,13 @@ body {
 	border: none;
 	text-align: center;
 	padding: 3px;
-}
-
-tr:nth-child(even) .btn_acq{
 	background-color: #aaa;
 }
 
-tr:nth-child(even) .btn_acq:hover{
+.btn_acq:hover{
 	background-color: #ddd;
 }
+
 
 tr:nth-child(odd) .btn_acq{
 	background-color: #69f;
