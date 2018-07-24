@@ -163,7 +163,7 @@ public class SellingProductDAO {
 		
 		//itera finchè ci sono recensioni nei risultati
 		while(rs.next()) {
-			recensioni.add(new Review(rs.getString(0), rs.getInt(1)));
+			recensioni.add(new Review(rs.getString(1), rs.getInt(2)));
 		}
 		
 		reviewStatementById.close();

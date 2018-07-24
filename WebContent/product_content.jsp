@@ -1,3 +1,5 @@
+<%@page import="pattern_dao.Review"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page import="pattern_dao.SellingProductDAO"%>
 <%@ page import="pattern_dao.SellingProductDTO"%>
 <%@ page import="javax.sql.DataSource"%>
@@ -17,7 +19,9 @@
 			<title>Descrizione Prodotti</title>
 			<base href="/SoftwareHouseWeb/">
 			<link rel= "stylesheet" href="css/product_content.css" type="text/css">	
-		
+			<script type="text/javascript" src="javascript/product_content.js"></script>
+			<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+		    
 </head>
 
 		<body>
@@ -30,9 +34,11 @@
 			e.printStackTrace();
 			}
 		SellingProductDTO product = null;
+		int productId = 0;
 		if(sellingProductDAO != null){
 			try{
-				product = sellingProductDAO.getProductById(Integer.parseInt(request.getParameter("id")));
+				productId = Integer.parseInt(request.getParameter("id"));
+				product = sellingProductDAO.getProductById(productId);
 			}
 			catch(SQLException e){
 				e.printStackTrace();
@@ -50,15 +56,38 @@
 				</div>
 				
 				<div id="recensioni" style="overflow-y:scroll;width:31.2%; height:120px;">
-				
-					descrizione prod...<br />
-					descrizione prod...<br />
-					descrizione prod...<br />
-					descrizione prod...<br />
-					descrizione prod...<br />
-					descrizione prod...<br />
-					descrizione prod...<br />
-				
+					<div>
+						<%
+						boolean status = true;
+						ArrayList<Review> recensioni = null;
+						float valutazione = 5;
+						try{
+							recensioni = sellingProductDAO.getRecensioniById(productId);
+							valutazione = sellingProductDAO.RateOfId(productId);
+						}catch(SQLException e){
+							e.printStackTrace();
+							status = false;
+						}
+						if(status){
+							%>
+							<p><b>Valutazione media:</b> <%=String.format("%.2f", valutazione)%></p>
+							<%for(int i = 0; i < recensioni.size(); i++){
+								Review recensione = recensioni.get(i);%>
+							<p><b>Commento:</b> <%=recensione.getComment()%><br>
+							<b>Valutazione:</b> <%=recensione.getStars()%></p>
+							<%}
+						}else{
+						%><p>Non è stato possibile recuperare le recensioni</p>
+						<%}%>
+							
+					</div>
+					
+					<div>
+						<textarea id="comment" placeholder="Inserisci qui la tua recensione"></textarea><br>
+						<input id="stars"type="number" min="0" max="5" value="5">		
+						<button type="button" onclick="sendReview(<%=productId%>)">Recensisci</button>
+					</div>
+					
 				</div>
 				
 				<div id="logo">
