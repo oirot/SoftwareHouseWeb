@@ -20,7 +20,7 @@ body{
 
 #logo{
 	
-	position: absolute;
+	position: relative;
 	margin-top:5%;
 	margin-left:7%;
 	font-size: 200%;
@@ -34,7 +34,7 @@ a{
 	color:#daa520;
 }
 
-#descrizione{
+#descrizione, #recensioni{
 	
 	margin:2% 60% 0 1%;
 	padding:0.2% 0 0.2% 1%;

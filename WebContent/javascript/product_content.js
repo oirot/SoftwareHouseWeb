@@ -7,7 +7,7 @@ function sendReview(id){
 	var stars = $("#stars").val();
 	
 	$.ajax("/SoftwareHouseWeb/addReview", {
-	    dataType: "text/plain",
+	    dataType: "text",
 	    data:{commento:comment, stelle:stars, id:id},
 	    type:"POST",
 	    success: function(data) {

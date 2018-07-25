@@ -56,7 +56,7 @@ public class AddReview extends HttpServlet{
 				sellingProductDAO.close();
 			}
 			if(status)
-				out.println("OOK");
+				out.print("OOK");
 		}else {
 			out.print("nagg");
 		}

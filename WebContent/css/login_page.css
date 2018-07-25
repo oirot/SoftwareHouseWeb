@@ -41,7 +41,6 @@ a{
 	padding: 20px 20px 20px 20px;
 	position: absolute;
 	margin-top: 22%;
-	width: 50%;
 }
 
 input.form{
@@ -64,7 +63,7 @@ input.form{
 }
 
 
-@media screen and (min-width:701px){
+@media screen and (min-device-width:1141px){
 
 div.container{
 	width: 100%;
@@ -119,23 +118,19 @@ input#error_button{
 
 
 
-@media  screen and (max-width: 700px) {
+@media  screen and (max-width: 1140px) {
 	
 	
 #form_container{
-	min-width:300px;
-	min-height:310px;
-    width: auto;
-    left: 10%;
-    right:10%;
-    top:0;
-	margin-top: 180px;    
+    width: 90%;
+    left: 9%;
+    top: 30%;
 }
 
-#logo {
-	margin-top:80px;
-	width:80%;
-	right:8%;
-	left:8%;
-	min-width: 300px;	
+h1 {
+	width: 30%;
+	right:62%;
+	top:5%;
+	font-size: 280%;
+	
 }
