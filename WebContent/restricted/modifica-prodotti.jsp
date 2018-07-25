@@ -32,7 +32,7 @@
 		  <tr>
 	    	<td></td>
 	 	  	<td><input id="add_name" type="text"></td>
-	 	  	<td><input id="add_desc" type="text"></td>
+	 	  	<td><textarea id="add_desc"></textarea></td>
 	 	  	<td><input id="add_ida" type="text"></td>
 	 	  	<td><input id="add_vers" type="text"></td>
 	 	  	<td><input id="add_prez" class="input_price" type="number"></td>
