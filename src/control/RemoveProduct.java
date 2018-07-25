@@ -1,4 +1,4 @@
-package servlets;
+package control;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
-import pattern_dao.SellingProductDAO;
+import model.SellingProductDAO;
 
 
 @WebServlet("/removeProduct")
-public class removeProduct extends HttpServlet{
+public class RemoveProduct extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

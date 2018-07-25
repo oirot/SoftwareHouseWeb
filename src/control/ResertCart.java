@@ -1,4 +1,4 @@
-package servlets;
+package control;
 
 import java.io.IOException;
 
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/resetCart")
-public class resertCart extends HttpServlet{
+public class ResertCart extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.getSession().setAttribute("cart", null);

@@ -1,7 +1,7 @@
-<%@page import="pattern_dao.Review"%>
+<%@page import="model.Review"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page import="pattern_dao.SellingProductDAO"%>
-<%@ page import="pattern_dao.SellingProductDTO"%>
+<%@ page import="model.SellingProductDAO"%>
+<%@ page import="model.SellingProductDTO"%>
 <%@ page import="javax.sql.DataSource"%>
 <%@ page import="java.sql.SQLException"%>
 

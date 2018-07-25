@@ -2,7 +2,7 @@
  * Classe che identifica un prodotto all'interno di un carrello.
  */
 
-package pattern_dao;
+package model;
 
 import java.math.BigDecimal;
 

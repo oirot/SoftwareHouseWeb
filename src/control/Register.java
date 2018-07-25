@@ -1,4 +1,4 @@
-package servlets;
+package control;
 
 import java.io.IOException;
 import java.sql.Date;
@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
-import pattern_dao.UserDAO;
-import pattern_dao.UserDTO;
+import model.UserDAO;
+import model.UserDTO;
 
 
 @WebServlet(urlPatterns= {"/addUser"}, initParams = {@WebInitParam(name="dateFormat", value="yyyy-MM-dd")})

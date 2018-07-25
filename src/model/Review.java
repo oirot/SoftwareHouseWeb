@@ -1,4 +1,4 @@
-package pattern_dao;
+package model;
 
 /**
  * Classe che rappresenta una recensione

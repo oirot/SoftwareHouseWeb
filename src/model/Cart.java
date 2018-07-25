@@ -2,13 +2,10 @@
  * Clase che gestisce  i prodotti nel carrello.
  */
 
-package utility;
+package model;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Iterator;
-
-import pattern_dao.CartProduct;
-import pattern_dao.SellingProductDTO;
 
 /**
  * 

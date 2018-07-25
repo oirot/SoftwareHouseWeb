@@ -1,4 +1,4 @@
-package pattern_dao;
+package model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,8 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.sql.DataSource;
-
-import utility.SQLStatemets;
 
 public class UserDAO {
 private Connection conn;

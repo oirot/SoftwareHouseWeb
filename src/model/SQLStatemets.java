@@ -1,4 +1,4 @@
-package utility;
+package model;
 
 public final class SQLStatemets {
 	public static final String productById = "SELECT * FROM prodotto p INNER JOIN prodotto_in_vendita piv ON p.id_prodotto = piv.id_prodotto WHERE p.id_prodotto = ?";

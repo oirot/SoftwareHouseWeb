@@ -2,7 +2,7 @@
  * Clase che identifica un prodotto in vendita.
  */
 
-package pattern_dao;
+package model;
 
 import java.math.BigDecimal;
 

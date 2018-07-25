@@ -1,5 +1,5 @@
 
-package pattern_dao;
+package model;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
@@ -8,10 +8,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.sql.DataSource;
-
-import com.mysql.jdbc.Statement;
-
-import utility.SQLStatemets;
 
 public class SellingProductDAO {
 

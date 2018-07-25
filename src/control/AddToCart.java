@@ -1,4 +1,4 @@
-package servlets;
+package control;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
-import pattern_dao.CartProduct;
-import pattern_dao.SellingProductDAO;
-import pattern_dao.SellingProductDTO;
-import utility.Cart;
+import model.Cart;
+import model.CartProduct;
+import model.SellingProductDAO;
+import model.SellingProductDTO;
 
 @WebServlet("/addToCart")
-public class addToCart extends HttpServlet{
+public class AddToCart extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();

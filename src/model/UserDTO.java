@@ -1,4 +1,4 @@
-package pattern_dao;
+package model;
 
 import java.sql.Date;
 

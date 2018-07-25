@@ -1,4 +1,4 @@
-package servlets;
+package control;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,12 +13,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
-import pattern_dao.SellingProductDAO;
-import pattern_dao.SellingProductDTO;
+import model.SellingProductDAO;
+import model.SellingProductDTO;
 
 
 @WebServlet("/addProduct")
-public class addProduct extends HttpServlet{
+public class AddProduct extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Map<String, String[]>parameters= request.getParameterMap();

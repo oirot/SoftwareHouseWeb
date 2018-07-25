@@ -13,7 +13,7 @@
 					<jsp:include page="includes/navbar.html"></jsp:include>
 					<h1>SoftwareHouse<a>Web</a></h1>
 					<p>
-						Opss! C'è stato un errore durante il login. <a href=<%=%>>Riprova</a>
+						Opss! C'è stato un errore durante il login. Riprova
 					</p>	
 					<jsp:include page="includes/footer.html"></jsp:include>
 				</div>			
