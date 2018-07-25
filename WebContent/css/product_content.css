@@ -20,21 +20,13 @@ body{
 
 #logo{
 	
-	position: relative;
-	margin-top:5%;
-	margin-left:7%;
-	font-size: 200%;
-	color:#4169e1;
-	width: 20%;
-	display: inline-block;
+	position: absolute;
+	margin-top:10%;
+	margin-left:4%;
+	width: 40%;
 }
 
-a{
-	
-	color:#daa520;
-}
-
-#descrizione, #recensioni{
+#descrizione{
 	
 	margin:2% 60% 0 1%;
 	padding:0.2% 0 0.2% 1%;
@@ -47,12 +39,11 @@ a{
 
 #recensioni{
 	
-	margin: -8% 1% 0 66.8%;
+	margin: -4% 1% 0 66.8%;
 	padding:0.2% 0 0.2% 1%;
 	background-color: black;
 	opacity:0.5;
 	color:#4169e1;
-	height: 5%;
 	overflow: auto;
 	
 }
@@ -60,7 +51,7 @@ a{
 #container_aggiungi{
 	
 	position:relative;
-	margin-top:4%;
+	margin-top:10%;
 	margin-left: 66.7%;
 	display:inline-block;
 	width:31.4%;
@@ -72,7 +63,6 @@ a{
 
 #aggiungi{
 	position:relative;
-	margin-bottom: 3%;
 	display: inline-block;
 	
 }
