@@ -1,8 +1,8 @@
 <%@page import="java.math.BigDecimal"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="org.apache.catalina.Session"%>
-<%@page import="utility.Cart"%>
-<%@page import="Model.CartProduct"%>
+<%@page import="model.Cart"%>
+<%@page import="model.CartProduct"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -28,7 +28,7 @@
 					<th>Nome</th>
 					<th>Descrizione</th>
 					<th>Costo Unitario</th>
-					<th>Quantità</th>
+					<th>Quantitï¿½</th>
 					<th>Totale</th>		
 				</tr>
 			<%
