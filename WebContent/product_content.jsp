@@ -68,6 +68,8 @@
 							e.printStackTrace();
 							status = false;
 						}
+						if(sellingProductDAO != null)
+							sellingProductDAO.close();
 						if(status){
 							%>
 							<p><b>Valutazione media:</b> <%=String.format("%.2f", valutazione)%></p>
@@ -84,9 +86,7 @@
 				</div>
 				
 				<div id="logo">
-				
-				<h2>SoftwareHouse<a>Web</a></h2>
-				
+					<img id="logo-content" alt="logo" src="images/logo-no-sfondo.png">				
 				</div>
 				
 				<div id="container_aggiungi">
