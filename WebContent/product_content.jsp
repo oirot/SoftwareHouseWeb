@@ -19,6 +19,7 @@
 			<title>Descrizione Prodotti</title>
 			<base href="/SoftwareHouseWeb/">
 			<link rel= "stylesheet" href="css/product_content.css" type="text/css">	
+			<link rel= "stylesheet" href="css/site.css" type="text/css">
 			<script type="text/javascript" src="javascript/product_content.js"></script>
 			<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
 		    
@@ -51,11 +52,13 @@
 			
 			<div id="container">
 				
-				<div id="descrizione">				
+				<div id="descrizione" style="height: 200px;">				
 					<p><%=product.getDescriprion()%></p>
+					
+					<button class="btn_acq" id="aggiungi" type="button">Aggiungi</button>
 				</div>
 				
-				<div id="recensioni" style="overflow-y:scroll;width:31.2%;">
+				<div id="recensioni" style="overflow-y:scroll;width:31.2%; height: 220px;">
 					<div>
 						<%
 						boolean status = true;
@@ -89,14 +92,19 @@
 					<img id="logo-content" alt="logo" src="images/logo-no-sfondo.png">				
 				</div>
 				
-				<div id="container_aggiungi">
+				<div id="container_aggiungi"style="height: 200px;">
+				
+						
 				
 				<div>
-						<textarea id="commenta" placeholder="Inserisci qui la tua recensione"></textarea><br>
-						<input id="stars"type="number" min="0" max="5" value="5">		
-						<button type="button" onclick="sendReview(<%=productId%>)">Recensisci</button>
+						<textarea id="commenta" placeholder="Inserisci qui la tua recensione" style="height: 100px;"></textarea>
+						
+					<div id="buttons">
+						<input id="stars"type="number" min="0" max="5" value="5"><br>		
+						<button class="btn_acq" id="button_recensione" type="button" onclick="sendReview(<%=productId%>)">Recensisci</button>
+					</div>
+						
 				</div>
-					<button id="aggiungi" type="button">Aggiungi</button>
 					
 				</div>
 				
