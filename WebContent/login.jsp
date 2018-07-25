@@ -19,9 +19,9 @@
 			
 			<div id="container">
 			
-				<h1>SoftwareHouse<a>Web</a></h1>
-			
 					<jsp:include page="/includes/navbar.html"></jsp:include>
+					
+					<img id="logo" alt="logo" src="images/logo.bmp.jpg">
 					
 					<div id="loginform">
 						<div id="form_container">

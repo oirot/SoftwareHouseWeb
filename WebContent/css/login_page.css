@@ -36,10 +36,12 @@ a{
 	color: #4169e1
 }
 
-h1{
+#logo{
 	color: #daa520;
 	padding: 20px 20px 20px 20px;
 	position: absolute;
+	margin-top: 22%;
+	transform:trasparent;
 }
 
 input.form{

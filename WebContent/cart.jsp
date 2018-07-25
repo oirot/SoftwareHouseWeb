@@ -10,6 +10,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Carello</title>
+<base href="/SoftwareHouseWeb/">
+<link rel= "stylesheet" href="css/cart.css" type="text/css">
 </head>
 <body>
 	<jsp:include page="includes/navbar.html"></jsp:include>

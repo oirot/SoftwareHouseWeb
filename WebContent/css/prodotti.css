@@ -33,3 +33,22 @@ button{
 	width: 6em;
 }
 
+/**************************************************************************************/
+
+
+@media screen and (max-device-width: 1140px){
+	
+	
+	
+img#carrello {
+	margin-left: 10%;
+	
+}
+
+img#login{
+
+	margin-left: 5%;
+	
+}
+
+
