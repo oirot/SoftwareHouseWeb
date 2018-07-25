@@ -21,7 +21,7 @@
 			
 					<jsp:include page="/includes/navbar.html"></jsp:include>
 					
-					<img id="logo" alt="logo" src="images/logo.bmp.jpg">
+					<img id="logo" alt="logo" src="images/logo-no-sfondo.png">
 					
 					<div id="loginform">
 						<div id="form_container">
