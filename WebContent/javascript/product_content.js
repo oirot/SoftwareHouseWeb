@@ -3,7 +3,7 @@
  */
 
 function sendReview(id){
-	var comment = $("#comment").val();
+	var comment = $("#commenta").val();
 	var stars = $("#stars").val();
 	
 	$.ajax("/SoftwareHouseWeb/addReview", {

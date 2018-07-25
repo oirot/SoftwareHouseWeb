@@ -55,7 +55,7 @@
 					<p><%=product.getDescriprion()%></p>
 				</div>
 				
-				<div id="recensioni" style="overflow-y:scroll;width:31.2%; height:120px;">
+				<div id="recensioni" style="overflow-y:scroll;width:31.2%;">
 					<div>
 						<%
 						boolean status = true;
@@ -68,6 +68,8 @@
 							e.printStackTrace();
 							status = false;
 						}
+						if(sellingProductDAO != null)
+							sellingProductDAO.close();
 						if(status){
 							%>
 							<p><b>Valutazione media:</b> <%=String.format("%.2f", valutazione)%></p>
@@ -81,28 +83,19 @@
 						<%}%>
 							
 					</div>
-					
-					<div>
-						<textarea id="comment" placeholder="Inserisci qui la tua recensione"></textarea><br>
-						<input id="stars"type="number" min="0" max="5" value="5">		
-						<button type="button" onclick="sendReview(<%=productId%>)">Recensisci</button>
-					</div>
-					
 				</div>
 				
-				<div id="logo_container">
-				
-				<img id="logo" alt="logo" src="images/logo-no-sfondo.png">
-				
+				<div id="logo">
+					<img id="logo-content" alt="logo" src="images/logo-no-sfondo.png">				
 				</div>
 				
 				<div id="container_aggiungi">
 				
-					<p>descrizione prod...</p>
-					<p>descrizione prod...</p>
-					<p>descrizione prod...</p>
-					<textarea rows="10" cols="1"></textarea>
-					<button id="commenta" type="button">Commenta</button>
+				<div>
+						<textarea id="commenta" placeholder="Inserisci qui la tua recensione"></textarea><br>
+						<input id="stars"type="number" min="0" max="5" value="5">		
+						<button type="button" onclick="sendReview(<%=productId%>)">Recensisci</button>
+				</div>
 					<button id="aggiungi" type="button">Aggiungi</button>
 					
 				</div>
