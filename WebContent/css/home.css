@@ -1,0 +1,44 @@
+@charset "ISO-8859-1";
+
+html, body{
+	height: 100%;
+	width: 100%;
+}
+
+#arrow-sx, #arrow-dx{
+	width: 3%;
+	position: absolute;
+	opacity: 0.6;
+	top: 25%;
+	cursor: pointer;
+	min-width: 20px;
+	
+}
+
+#arrow-sx:hover, #arrow-dx:hover{
+	opacity: 1;
+}
+
+#arrow-sx{
+	left:0;
+}
+
+#arrow-dx{
+	right:0;
+}
+
+
+#home_img_container{
+	height: 60%;
+	overflow: hidden;
+}
+
+#img_prodotto{
+	width: 100%;
+	height: 100%;
+}
+
+.container{
+	width: 100%;
+	height: 100%;
+}
