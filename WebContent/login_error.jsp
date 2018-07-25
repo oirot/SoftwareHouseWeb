@@ -17,7 +17,7 @@
 			
 				<div id="container">
 					
-					<h1>SoftwareHouse<a>Web</a></h1>
+					<img id="logo" alt="logo" src="images/logo-no-sfondo.png"><br>
 					
 					<p>
 						Opss! C'è stato un errore durante il login. Riprova

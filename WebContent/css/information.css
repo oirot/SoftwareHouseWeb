@@ -40,7 +40,7 @@ p {
 	color: gray;
 }
 
-@media  screen and (min-width: 1141px) {
+@media  screen and (min-width: 701px) {
 	
 	
 div#container{
@@ -128,7 +128,7 @@ h1#frase_effetto{
 
 
 
-@media  screen and (max-width: 1140px) {
+@media  screen and (max-width: 700px) {
 	
     body {
     		

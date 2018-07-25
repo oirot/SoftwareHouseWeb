@@ -13,17 +13,23 @@
 
 p{
 	
-	margin-top: 4%;
-	margin-left: 5%;
+	margin-top: 2%;
+	margin-left: 2%;
 	color: red;
-	font-size: 180%;
+	width:50%;
+  	height:auto;
+  	min-height:100px;
+  	font-size:2vw;
+  	display: inline;
 }
 
-h1{
+#logo{
 	color: #daa520;
 	padding: 20px 20px 20px 20px;
 	position: relative;
-	font-size: 500%;
+	right: 8%;
+	width: 70%;
+	height: auto;
 }
 
 a{
