@@ -6,8 +6,8 @@
 			top: 0;
 			font-size: 1.0em;
 			width: 65%;  
-			min-height: 4%;
-			max-height: 7%;
+			min-height: 35px;
+			max-height: 45px;
 }
 
 .navbar {

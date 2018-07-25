@@ -1,0 +1,31 @@
+@charset "ISO-8859-1";
+
+
+
+
+#container{
+	
+	position: relative;
+	margin-left: 25%;
+	margin-top: 20%;
+	
+}
+
+p{
+	
+	margin-top: 4%;
+	margin-left: 5%;
+	color: red;
+	font-size: 180%;
+}
+
+h1{
+	color: #daa520;
+	padding: 20px 20px 20px 20px;
+	position: relative;
+	font-size: 500%;
+}
+
+a{
+	color: #4169e1
+}
