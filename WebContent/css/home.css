@@ -54,3 +54,23 @@ html, body{
 .hidden{
 	display: none;
 }
+
+@media screen and (max-width: 700px){
+
+	
+#img_prodotto{
+	display: none;
+}
+
+.aggiungi{
+	position: absolute;
+	top: 15%;
+	right: 5%;
+}
+
+#arrow-sx, #arrow-dx{
+	position: absolute;	
+	top: 15%;
+}
+
+}
