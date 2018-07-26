@@ -8,6 +8,8 @@
 	<head>
 			<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 			<link rel= "stylesheet" href="css/prodotti.css" type="text/css">
+			<link rel= "stylesheet" href="css/long_page.css" type="text/css">
+			
 			<title>Prodotti</title>
 	</head>
 			<body>

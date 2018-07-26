@@ -57,67 +57,62 @@
 					<p><%=product.getDescriprion()%></p>
 				</div>
 				
-				
-				<img id="logo_prodotto" alt="logo_prodotto" src="images/<%=logoPath%>">
-				
-				
-				<div id="recensioni" style="overflow-y:scroll;width:31.2%; height: 220px;">
-					<div>
-						<%
-						boolean status = true;
-						ArrayList<Review> recensioni = null;
-						float valutazione = 5;
-						try{
-							recensioni = sellingProductDAO.getRecensioniById(productId);
-							valutazione = sellingProductDAO.RateOfId(productId);
-						}catch(SQLException e){
-							e.printStackTrace();
-							status = false;
-						}
-						if(status){
-							%>
-							<p><b>Valutazione media:</b> <%=String.format("%.2f", valutazione)%></p>
-							<%for(int i = 0; i < recensioni.size(); i++){
-								Review recensione = recensioni.get(i);%>
-							<p><b>Commento:</b> <%=recensione.getComment()%><br>
-							<b>Valutazione:</b> <%=recensione.getStars()%></p>
-							<%}
-						}else{
-						%><p>Non è stato possibile recuperare le recensioni</p>
-						<%}
-						if(sellingProductDAO != null)
-							sellingProductDAO.close();%>
-							
+				<aside>
+					<div id="img_container">
+						<img id="logo_prodotto" alt="logo_prodotto" src="images/<%=logoPath%>"><br>
 					</div>
-				</div>
+					
+					<div id="recensioni" style="overflow-y:scroll;">
+						<div>
+							<%
+							boolean status = true;
+							ArrayList<Review> recensioni = null;
+							float valutazione = 5;
+							try{
+								recensioni = sellingProductDAO.getRecensioniById(productId);
+								valutazione = sellingProductDAO.RateOfId(productId);
+							}catch(SQLException e){
+								e.printStackTrace();
+								status = false;
+							}
+							if(sellingProductDAO != null)
+								sellingProductDAO.close();
+							if(status){
+								%>
+								<p><b>Valutazione media:</b> <%=String.format("%.2f", valutazione)%></p>
+								<%for(int i = 0; i < recensioni.size(); i++){
+									Review recensione = recensioni.get(i);%>
+								<p><b>Commento:</b> <%=recensione.getComment()%><br>
+								<b>Valutazione:</b> <%=recensione.getStars()%></p>
+								<%}
+							}else{
+							%><p>Non è stato possibile recuperare le recensioni</p>
+							<%}%>
+								
+						</div>
+					</div><br>
+					
+				
+					<div id="container_aggiungi">
+						<textarea id="commenta" placeholder="Inserisci qui la tua recensione" style="height: 100px;"></textarea>
+							
+						<div id="buttons">
+							<input id="stars"type="number" min="0" max="5" value="5"><br>		
+							<button class="btn_acq" id="button_recensione" type="button" onclick="sendReview(<%=productId%>)">Recensisci</button>
+						</div>	
+					</div>
+				</aside>
 				
 				<div id="logo">
 					<img id="logo-content" alt="logo" src="images/logo-no-sfondo.png">				
 				</div>
-				
-				<div id="container_aggiungi"style="height: 200px;">
-				
-						
-				
-				<div>
-						<textarea id="commenta" placeholder="Inserisci qui la tua recensione" style="height: 100px;"></textarea>
-						
-					<div id="buttons">
-						<input id="stars"type="number" min="0" max="5" value="5"><br>		
-						<button class="btn_acq" id="button_recensione" type="button" onclick="sendReview(<%=productId%>)">Recensisci</button>
-					</div>
-						
-				</div>
 					
+				
 				</div>
 				
 				<%}else{%>
 					<p>Ngul nun funzion niente</p>
-				<%}%>
-				
-				<jsp:include page="includes/footer.html"></jsp:include>	
-				
-			</div>
+				<%}%>	
 		</body>	
 		
 </html>

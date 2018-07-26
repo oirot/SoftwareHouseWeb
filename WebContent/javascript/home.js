@@ -2,9 +2,9 @@
  * 
  */
 
-var contents = [{id:'61', logo:'webgear.png', img:"webgeartop.jpg"}, 
-				{id:'62',logo:'visualtool.png', img:'visualtooltop.jpg'},
-				{id:'63', logo:'easyads.png', img:'gird.jpg'}];
+var contents = [{id:'1', logo:'webgear.png', img:"webgeartop.jpg"}, 
+				{id:'2',logo:'visualtool.png', img:'visualtooltop.jpg'},
+				{id:'3', logo:"easy.png", img:'gird.jpg'}];
 var index = 0;
 var ex;
 
