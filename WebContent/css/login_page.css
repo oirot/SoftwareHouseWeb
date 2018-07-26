@@ -21,7 +21,18 @@ form{
 p{
 	margin-left: 5%;
 	margin-top: 10%;
-	color: #4169e1
+	color: #4169e1;
+}
+
+#register{
+	
+	margin: 0 !important;
+	color: #cc0000 !important;
+}
+
+#qui{
+	
+	color: #daa520 !important;
 }
 
 

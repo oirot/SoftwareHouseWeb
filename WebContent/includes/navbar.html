@@ -15,7 +15,7 @@
 	<ul>
 
 		<li>
-			  <a href="/SoftwareHouseWeb/home.jsp">Home</a>
+			  <a onmouseenter="move(this)" href="/SoftwareHouseWeb/home.jsp">Home</a>
 		</li>
 			  
 		<li>
@@ -28,14 +28,8 @@
 		</li>
 			 
 	 	<li>
-			  <div class="dropdown">
-			  <button class="dropbtn" onclick="myFunction()"><span id="servizi">Servizi</span>
-			  </button>
-			  <div class="dropdown-content" id="myDropdown">
-			   	  <a href="/SoftwareHouseWeb/management/products">Management</a>
-			   	<a href="#">Area dipendenti</a>
-			 </div>
-			 </div>
+			
+		  <a href="/SoftwareHouseWeb/management/products">Management</a>
 			 
 		</li>
 		
@@ -51,23 +45,6 @@
   
 </nav>
 
-
-
-<script>
-
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-    var myDropdown = document.getElementById("myDropdown");
-      if (myDropdown.classList.contains('show')) {
-        myDropdown.classList.remove('show');
-      }
-  }
-}
-</script>
 
 </body>
 </html>
