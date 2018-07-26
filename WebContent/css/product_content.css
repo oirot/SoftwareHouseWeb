@@ -19,11 +19,10 @@ body{
 }
 
 #logo-content{
-	
-	position: absolute;
-	margin-top:10%;
-	margin-left:1%;
-	width: 40%;
+	position: relative;
+	left: 8%;
+	margin-top:11%;
+	width: 35%;
 }
 
 #descrizione{
@@ -36,66 +35,75 @@ body{
 	background-color: black;
 	opacity:0.5;
 	color:#4169e1;
-	
+	display: inline-block;
+}
+
+aside{
+	float: right;
+	width: 45%;
+	text-align: center;
+}
+
+
+#logo_prodotto{
+	width: 50%;
+}
+
+aside *{
+	margin-top: 20px;
+	margin-right: 20px; 
+	width: 100%;
+}
+
+aside #img_container{
+	width: 100%;
+	height: 250px;
 }
 
 
 #recensioni{
-	
-	margin-top: 25px;
-	margin-right: 25px;
-	width: 48%;
+	width: 98%;
 	padding:0.2% 0 0.2% 1%;
 	background-color: black;
 	opacity:0.5;
 	color:#4169e1;
 	overflow: auto;
-	float: right;
-	position: relative;
-	top: -40%;	
+	height: 220px;
+	text-align: left;
+//	float: right;
 }
+
+	
 
 #container_aggiungi{
 	
-	position:relative;
-	margin-top:10%;
-	margin-left: 66.7%;
-	display:inline-block;
-	width:31.4%;
 	padding:0.2% 0 0.2% 1%;
 	background-color: black;
 	opacity:0.5;
 	color:#4169e1;
+	height: 150px;
+	margin-bottom: 20px;
 }
-
-/*
-#aggiungi{
-	position:relative;
-	top:10%;
-	left: 80%;
-	height: 22px;
-	width: auto;
-}*/
 
 #commenta{
-	
-	position:relative;
-	margin-top:8%;
 	display:inline-block;
-}
-	
-textarea{
-	
 	width: 75%;
+	height: 200px;
+	text-align: left;
+	
 }
 
 #button_recensione{
-	
-	margin-top: 5px;
+	width: 90%;
+}
+
+
+#stars{
+	width: 45%;
 }
 
 #buttons{
 	float: right;
-	padding-right: 4%;
-	margin-top: 20%;
+	width: 15%;
+	display: inline-block;
 }
