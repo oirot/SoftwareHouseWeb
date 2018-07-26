@@ -53,9 +53,6 @@
 			
 			<div id="container">
 				
-				<div id="descrizione" style="height: 200px;">				
-					<p><%=product.getDescriprion()%></p>
-				</div>
 				
 				<aside>
 					<div id="img_container">
@@ -102,6 +99,10 @@
 						</div>	
 					</div>
 				</aside>
+				
+				<div id="descrizione" style="height: 200px;">				
+					<p><%=product.getDescriprion()%></p>
+				</div>
 				
 				<div id="logo">
 					<img id="logo-content" alt="logo" src="images/logo-no-sfondo.png">				
