@@ -74,8 +74,6 @@
 							e.printStackTrace();
 							status = false;
 						}
-						if(sellingProductDAO != null)
-							sellingProductDAO.close();
 						if(status){
 							%>
 							<p><b>Valutazione media:</b> <%=String.format("%.2f", valutazione)%></p>
@@ -86,7 +84,9 @@
 							<%}
 						}else{
 						%><p>Non è stato possibile recuperare le recensioni</p>
-						<%}%>
+						<%}
+						if(sellingProductDAO != null)
+							sellingProductDAO.close();%>
 							
 					</div>
 				</div>
