@@ -59,5 +59,7 @@
 			</table>
 			<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
 			<script src="javascript/prodotti.js" type="text/javascript"></script>
+			<script src="javascript/acquista.js" type="text/javascript"></script>
+			
 			</body>
 </html>

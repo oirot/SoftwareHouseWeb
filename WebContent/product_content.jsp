@@ -9,6 +9,7 @@
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ 
 <!DOCTYPE html>
 <html>
 
@@ -20,9 +21,7 @@
 			<base href="/SoftwareHouseWeb/">
 			<link rel= "stylesheet" href="css/product_content.css" type="text/css">	
 			<link rel= "stylesheet" href="css/site.css" type="text/css">
-			<script type="text/javascript" src="javascript/product_content.js"></script>
-			<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-		    
+			<script type="text/javascript" src="javascript/product_content.js"></script>		    
 </head>
 
 		<body>
@@ -35,6 +34,7 @@
 			e.printStackTrace();
 			}
 		SellingProductDTO product = null;
+		String logoPath = null;
 		int productId = 0;
 		if(sellingProductDAO != null){
 			try{
@@ -48,15 +48,18 @@
 				return;
 			}
 		}
-		if(product != null){%>
+		logoPath = request.getParameter("logo");
+		if(product != null && logoPath != null){%>
 			
 			<div id="container">
 				
 				<div id="descrizione" style="height: 200px;">				
 					<p><%=product.getDescriprion()%></p>
-					
-					<button class="btn_acq" id="aggiungi" type="button">Aggiungi</button>
 				</div>
+				
+				
+				<img id="logo_prodotto" alt="logo_prodotto" src="images/<%=logoPath%>">
+				
 				
 				<div id="recensioni" style="overflow-y:scroll;width:31.2%; height: 220px;">
 					<div>
