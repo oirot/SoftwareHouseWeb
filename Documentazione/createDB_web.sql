@@ -283,6 +283,12 @@ BEGIN
     
 END;$$
 
+CREATE TRIGGER add_user AFTER INSERT ON utente
+FOR EACH ROW
+BEGIN
+	INSERT possiede_ruolo(email, nome) VALUES(NEW.email, "registered");
+END;$$
+
 INSERT ruolo VALUES("registered", "Utente base registrato"),
 ("management", "Utente di tipo manageriale");
 $$

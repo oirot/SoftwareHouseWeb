@@ -30,7 +30,7 @@ function tryActivateSubmit(){
 }
 
 function validateMail(input){
-	var mailExpr = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	var mailExpr = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,3})+$/;
 	if(input.value.match(mailExpr)){
 		isMailValid = true;
 	}
