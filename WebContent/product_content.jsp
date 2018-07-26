@@ -113,9 +113,7 @@
 				
 				<%}else{%>
 					<p>Ngul nun funzion niente</p>
-				<%}%>
-				
-				<jsp:include page="includes/footer.html"></jsp:include>	
+				<%}%>	
 				
 			</div>
 		</body>	

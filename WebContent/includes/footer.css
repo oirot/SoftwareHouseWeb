@@ -71,28 +71,24 @@ html, body{
 	padding: 1% 1% 1% 1%;
 }
 	
-}
 
-h2{
+#footer_container h2{
 	
 	color:#4169e1;
 	position:relative;
 }
 
-a{
+#sx a , #dx a{
 	
 	color:  #daa520;
 }
 
 }
 
-
-
-
 @media screen and (max-width: 700px){
 	
-#footer_container *{
-	display: none !important;
+#footer_container{
+	display: none;
 }
 	
 }
