@@ -75,8 +75,6 @@
 								e.printStackTrace();
 								status = false;
 							}
-							if(sellingProductDAO != null)
-								sellingProductDAO.close();
 							if(status){
 								%>
 								<p><b>Valutazione media:</b> <%=String.format("%.2f", valutazione)%></p>
@@ -112,7 +110,9 @@
 				
 				<%}else{%>
 					<p>Ngul nun funzion niente</p>
-				<%}%>	
+				<%}
+				if(sellingProductDAO != null)
+					sellingProductDAO.close();%>	
 		</body>	
 		
 </html>
