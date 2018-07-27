@@ -38,6 +38,8 @@
 								</span>
 								<input type="password" name="j_password" placeholder="Password" class="form" onkeyup="validatePsw(this)"><br>
 								
+								<p id="register">Non sei registrato? Clicca <a id="qui" href="signup.jsp">qui</a></p>
+								
 						 		<input id = "login_button" type="submit" value="Login" class="form" disabled><br>
 					</form>
 						
