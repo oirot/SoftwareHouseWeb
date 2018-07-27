@@ -28,7 +28,7 @@
 		</div>
 			
 		<div id="prodotto">
-			<jsp:include  page="restricted/product_content.jsp">
+			<jsp:include  page="/restricted/product_content.jsp">
 				<jsp:param value="1" name="id"/>
 				<jsp:param value="webgear.png" name="logo"/>
 			</jsp:include>
