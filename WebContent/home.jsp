@@ -19,7 +19,7 @@
 		<jsp:include page="/includes/navbar.html"></jsp:include>
 		<div id="home_img_container">
 			<img id="arrow-sx" src="images/arrow-sx.png" onclick="move_sx()" alt="arrow-sx">
-			<img id="img_prodotto" src="images/webgeartop.jpg" alt="img prodotto">
+			<a id="link_1" href="products?id=1"><img id="img_prodotto" src="images/webgeartop.jpg" alt="img prodotto"></a>
 			<img id="arrow-dx" src="images/arrow-dx.png" onclick="move_dx()" alt="arrow-dx">
 			<button class="btn_acq aggiungi" id="btn_1" onclick="acquista(this)" type="button">Aggiungi</button>
 			<input id="q_1" class="hidden" type="number" value="1">
