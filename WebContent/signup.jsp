@@ -7,6 +7,7 @@
 <title>Registrazione</title>
 	<base href="/SoftwareHouseWeb/">
 	<link rel= "stylesheet" href="css/signup.css" type="text/css">
+	<link rel="stylesheet" href="css/long_page.css" type="text/css">
 </head>
 <body>
 
