@@ -32,7 +32,6 @@ html, body{
 	opacity:0.5;
 	position: absolute;
 	top: 100%;
-	display: inline-block;
 	clear: both;
 	text-align: center;
 	font-size: 15px;

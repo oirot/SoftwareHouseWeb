@@ -25,7 +25,7 @@
 	
 <div id="container">
 
-	<h2>SoftwareHouse<a>Web</a></h2>
+	<img id="logo" alt="logo" src="images/logo-no-sfondo.png">
 
 	<div id="text_container">
 		<h1>Registrati ed ottieni lo status di utente registrato:</h1>
