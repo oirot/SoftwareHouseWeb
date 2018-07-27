@@ -9,15 +9,19 @@
 	<link rel= "stylesheet" href="css/signup.css" type="text/css">
 	<link rel= "stylesheet" href="css/site.css" type="text/css">
 	<link rel="stylesheet" href="css/long_page.css" type="text/css">
+	<link rel= "stylesheet" href="includes/navbar.css" type="text/css">
+	<link rel= "stylesheet" href="includes/footer.css" type="text/css">
 	
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="javascript/signup.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	
 	<style>
 		#mail_img, #psw_img{
 			position: relative;
 			left: -25px;
 		}
 	</style>
+	
 </head>
 <body>
 
@@ -73,4 +77,8 @@
 	<jsp:include page="includes/footer.html"></jsp:include>
 	
 </body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="javascript/signup.js"></script>
+
 </html>

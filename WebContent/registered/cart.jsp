@@ -8,13 +8,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Carello</title>
-<base href="/SoftwareHouseWeb/">
-<link rel= "stylesheet" href="css/cart.css" type="text/css">
+	<meta charset="UTF-8">
+	<title>Carello</title>
+	<base href="/SoftwareHouseWeb/">
+	<link rel= "stylesheet" href="css/cart.css" type="text/css">
+	<link rel= "stylesheet" href="includes/navbar.css" type="text/css">
+	<link rel= "stylesheet" href="includes/footer.css" type="text/css">
+	<link rel= "stylesheet" href="css/site.css" type="text/css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 </head>
 <body>
-	<jsp:include page="includes/navbar.html"></jsp:include>
+	<jsp:include page="/includes/navbar.html"></jsp:include>
 	<%Cart cart = (Cart)session.getAttribute("cart");
 	Iterator<CartProduct> cartIter = null;
 	if(cart != null){
@@ -50,8 +56,8 @@
 			<%}%>	
 			</table>
 			<p>Totale: <%=totalPrice%></p>
-			<button type="button" onclick="reset()">Reset</button>
-			<button type="button" onclick="acquista()">Acquista</button>
+			<button type="button" class="btn_acq" onclick="reset()">Reset</button>
+			<button type="button" class="btn_acq" onclick="acquista()">Acquista</button>
 		</div>
 	<%}else{%>
 		<div>
@@ -78,7 +84,7 @@
 			reset();
 		}
 	</script>
-	<jsp:include page="includes/footer.html"></jsp:include>
+	<jsp:include page="/includes/footer.html"></jsp:include>
 	
 </body>
 </html>

@@ -15,7 +15,7 @@ function change(i){
 	$("#link_" + ex).attr('href', 'products?id=' + contents[i].id);
 	$("#link_" + ex).attr('id', "link_" + contents[i].id);
 	
-	$.ajax("/SoftwareHouseWeb/product_content.jsp", {
+	$.ajax("/SoftwareHouseWeb/restricted/product_content.jsp", {
 	    dataType: "html",
 	    data:{id: contents[i].id, logo: contents[i].logo},
 	    type:"GET",

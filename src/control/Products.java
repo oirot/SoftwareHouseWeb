@@ -45,7 +45,7 @@ public class Products extends HttpServlet{
 		if(sellingProductDAO != null) sellingProductDAO.close();
 		req.setAttribute("sellingList", productList);
 		if((req.getServletPath()).startsWith("/management/")) {
-			getServletContext().getRequestDispatcher("/restricted/modifica-prodotti.jsp").forward(req, resp);
+			getServletContext().getRequestDispatcher("/management/modifica-prodotti.jsp").forward(req, resp);
 
 		}else {
 			getServletContext().getRequestDispatcher("/restricted/Prodotti.jsp").forward(req, resp);

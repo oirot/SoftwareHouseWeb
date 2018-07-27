@@ -59,9 +59,10 @@ tr:nth-child(odd) .btn_acq:hover{
 	background-color: #224a5a;
 }
 
+
 .btn_acq:disabled{
 	cursor: auto !important;
-	background-color: #aaa !important;
+//	background-color: #aaa !important;
 	
 }
 		 

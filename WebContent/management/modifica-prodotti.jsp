@@ -5,9 +5,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+		<base href="/SoftwareHouseWeb/">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link rel= "stylesheet" href="/SoftwareHouseWeb/css/prodotti.css" type="text/css">
 		<link rel= "stylesheet" href="/SoftwareHouseWeb/css/long_page.css" type="text/css">
+		<link rel= "stylesheet" href="includes/navbar.css" type="text/css">
+		<link rel= "stylesheet" href="includes/footer.css" type="text/css">
+		<link rel= "stylesheet" href="css/site.css" type="text/css">
+			
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
 		<title>Prodotti</title>
 </head>
 <body>
@@ -36,7 +43,7 @@
 	 	  	<td><textarea id="add_desc"></textarea></td>
 	 	  	<td><input id="add_ida" type="text"></td>
 	 	  	<td><input id="add_vers" type="text"></td>
-	 	  	<td><input id="add_prez" class="input_price" type="number"></td>
+	 	  	<td><input id="add_prez" class="input_price" min="1" type="number"></td>
 			<td><button type="button" class="btn_acq" onclick="add()">Aggiungi</button></td>
 	 	  </tr>
 	 	  <%

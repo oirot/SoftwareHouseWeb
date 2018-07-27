@@ -10,7 +10,11 @@
 
 			<title>Log In Page</title>
 			<base href="/SoftwareHouseWeb/">
-			<link rel= "stylesheet" href="css/login_page.css" type="text/css">			
+			<link rel= "stylesheet" href="css/login_page.css" type="text/css">	
+			<link rel= "stylesheet" href="includes/navbar.css" type="text/css">
+			<link rel= "stylesheet" href="includes/footer.css" type="text/css">		
+			<link rel= "stylesheet" href="css/site.css" type="text/css">
+			
 			<script src="javascript/login.js" type="text/javascript"></script>
 			
 		</head>

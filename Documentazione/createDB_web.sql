@@ -353,6 +353,18 @@ FIELDS TERMINATED BY ',' ENCLOSED BY '"' IGNORE 1 LINES
 (nome_materiale,descrizione_materiale,costo);
 $$
 
+
+INSERT prodotto(id_prodotto, ida, nome_prodotto, descrizione, versione) VALUES
+(1, "gamma", "WebGear", "Negli ultimi anni la realtà virtuale si sta affermando sempre più sul mercato videoludico. La proposta di SoftwareHouseWeb è il WebGear, un visore di realtà virtuale che può competere con i top di gamma del settore", "1.11"), 
+(2, "pi", "VisualTool", "Tool di visualizzazione di dati scientifici. Permette la realizzazione anche dei grafici più complessi. Sono disponibili i pulg in per l'analisi statistica ed il supporto a formati non propietari", "2.45c"),
+(3, "beta", "EasyAds", "Gestione e monitorizzazione dei propri annuncio personalizzati in maniera semplice e veloce. Con EasyAds avrai a disposizione uno strumento di tageting ads di livello professionale con un'elevata facilità d'utilizzo", "13.01");$$
+
+INSERT prodotto_in_vendita(id_prodotto, prezzo) VALUES
+(1, 10),
+(2, 170),
+(3, 455);$$
+
+
 LOAD DATA LOCAL INFILE 'C:\\Users\\vitto\\Desktop\\AIELLO_SANSONE\\Script_mysql\\prodotto.sql' INTO TABLE prodotto
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' IGNORE 1 LINES
 (ida,nome_prodotto);
@@ -394,5 +406,4 @@ FIELDS TERMINATED BY ',' ENCLOSED BY '"' IGNORE 1 LINES
 (id_azienda,id_azienda);
 $$ 
 
-
-INSERT possiede_ruolo(nome,email) VALUES("registered", "r.s@b.c"),("management","v.a@b.c");$$
+INSERT possiede_ruolo(nome,email) VALUES("management","v.a@b.c");$$
