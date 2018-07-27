@@ -82,3 +82,62 @@ a{
 	color: #4169e1
 }
 
+
+/*****************************************************************/
+
+@media  screen and (max-width: 1020px) {
+	
+		
+#form_container{
+	position:relative;
+	min-width:300px;
+	min-height:310px;
+    width: 60%;
+ 	right:20%;
+    top:0;
+	margin-top: 180px;    
+}
+
+h2 {
+	position:absolute;
+	width:80%;
+	top:10%;
+	left:30%;
+	min-width: 300px;	
+	margin:0;
+}
+
+#text_container{
+	
+	position:relative;
+	margin:0;
+	display: block;
+	width: 60%;
+	left:30%;
+	top:20%;
+	
+}
+
+@media  screen and (max-width: 700px){
+	
+	#text_container{
+	
+	position:relative;
+	margin:0;
+	display: block;
+	width: 60%;
+	left:34%;
+	margin-top:30%;
+	}
+	
+	#form_container{
+	position:relative;
+	min-width:300px;
+	min-height:310px;
+    width: 60%;
+ 	right:16%;
+    top:0;
+	margin-top: 60px;    
+}
+	
+}

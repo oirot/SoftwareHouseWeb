@@ -8,6 +8,8 @@
 	<base href="/SoftwareHouseWeb/">
 	<link rel= "stylesheet" href="css/signup.css" type="text/css">
 	<link rel= "stylesheet" href="css/site.css" type="text/css">
+	<link rel="stylesheet" href="css/long_page.css" type="text/css">
+	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="javascript/signup.js"></script>
 	<style>
