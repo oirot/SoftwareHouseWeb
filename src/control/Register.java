@@ -77,6 +77,6 @@ public class Register extends HttpServlet{
 			return;
 		}
 	
-		resp.sendRedirect("registered/test.html");
+		resp.sendRedirect("registered/home.jsp");
 	}
 }

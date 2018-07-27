@@ -7,6 +7,15 @@
 <title>Registrazione</title>
 	<base href="/SoftwareHouseWeb/">
 	<link rel= "stylesheet" href="css/signup.css" type="text/css">
+	<link rel= "stylesheet" href="css/site.css" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="javascript/signup.js"></script>
+	<style>
+		#mail_img, #psw_img{
+			position: relative;
+			left: -25px;
+		}
+	</style>
 </head>
 <body>
 
@@ -25,32 +34,34 @@
 			
 			<div class="tableRow">
 			<p>Nome</p>
-			<p><input type="text" name="nome" placeholder="Nome"/></p>
+			<p><input id="nome_input" type="text" name="nome" placeholder="Nome" onkeypress="testButton()" required/></p>
 			</div>
 			
 			<div class="tableRow">
 			<p>Cognome</p>
-			<p><input type="text" name="cognome" placeholder="Cognome" /></p>
+			<p><input id="cognome_input" type="text" name="cognome" placeholder="Cognome" onkeypress="testButton()" required/></p>
 			</div>
 			
 			<div class="tableRow">
 			<p>Email</p>
-			<p><input type="text" name="email" placeholder="email"></p>
-			<p><img alt="user-error" src="images/username-no.jpg"></p>
+			<p><input onchange="isMailValid()" id="mail_input" type="text" name="email" placeholder="email" required autocomplete="off"></p>
+			<p><img id="mail_img" alt="user-error" width="25px" height="25px" src="images/red-cross.png"></p>
 			</div>
 			
 			<div class="tableRow">
 			<p>Data di nascita</p>
-			<p><input type="date" name="data_nascita"></p>
+			<p><input id="date_input" type="date" name="data_nascita" onchange="testButton()" required></p>
 			</div>
 			
 			<div class="tableRow">
 			<p>Password</p>
-			<p><input type="password" name="hashed_password"></p>
+			<p><input id="psw_input" type="password" name="hashed_password" onkeyup="validatePsw()" required autocomplete="off"></p>
+			<p><img id="psw_img" alt="user-error" width="25px" height="25px" src="images/red-cross.png"></p>
+			
 			</div>
 			
 			<div>
-			<p><input class="btn_acq"id="button"type="submit" value="Iscriviti"/></p>
+			<p><input id="create_btn" class="btn_acq"id="button"type="submit" value="Iscriviti" autocomplete="off" disabled/></p>
 			</div>
 			
 		</form>
