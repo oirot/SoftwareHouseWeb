@@ -12,6 +12,8 @@ function change(i){
 	$("#img_prodotto").attr('src', "images/" + contents[i].img);
 	$("#btn_" + ex).attr('id', "btn_" + contents[i].id);
 	$("#q_" + ex).attr('id', "q_" + contents[i].id);
+	$("#link_" + ex).attr('href', 'products?id=' + contents[i].id);
+	$("#link_" + ex).attr('id', "link_" + contents[i].id);
 	
 	$.ajax("/SoftwareHouseWeb/product_content.jsp", {
 	    dataType: "html",

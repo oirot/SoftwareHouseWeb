@@ -17,6 +17,12 @@
 				<jsp:include page="/includes/navbar.html"></jsp:include>
 				<h2>Prodotti</h2>
 				<%ArrayList<SellingProductDTO> prodotti = (ArrayList<SellingProductDTO>)request.getAttribute("sellingList");
+				int id;
+				try{
+					id = Integer.parseInt(request.getParameter("id"));
+				}catch(Exception e){
+					id = -1;
+				}
 				if(prodotti == null || prodotti.isEmpty() ) {%>
 				
 					<p>"Non ci sono prodotti disponibile nel carrello."</p>
@@ -39,8 +45,10 @@
 					  SellingProductDTO productToFormat = prodotti.get(i);
 					  int currentId = productToFormat.getId();%>
 					  
-					  
-				   	  <tr>
+					  <%String class_str = "";
+					  if(id != -1 && currentId == id)
+					  	class_str = "class='evidenziato'";%>
+				   	  <tr <%=class_str%>>
 				   	  	  <td><%=productToFormat.getId()%></td>
 					   	  <td><%=productToFormat.getName()%></td>
 					 	  <td><%=productToFormat.getDescriprion()%></td>

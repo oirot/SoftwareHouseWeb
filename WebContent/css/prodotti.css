@@ -5,6 +5,9 @@ p{
 	color:grey;
 }
 
+.evidenziato{
+	background: #c00 !important;
+}
 
 button{
 /*	
@@ -50,5 +53,4 @@ img#login{
 	margin-left: 5%;
 	
 }
-
-
+}
